@@ -18,7 +18,12 @@
     "paths": {
       "@components/*": ["components/*"],
       "@layouts/*": ["_layouts/*"],
-      "@gamification/*": ["gamification/*"]
+      "@gamification/*": ["gamification/*"],
+      "@redux/*": ["redux/*"],
+      "@imports/*": ["imports/*"],
+      "@icons": ["icons/index"],
+      "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
