@@ -12,24 +12,13 @@ export function Header() {
       position="fixed"
       top={0}
       alignItems="center"
-      py={5}
+      p={6}
       mb={2}
       justifyContent="space-between"
     >
-      <Flex justifyContent="space-around" alignItems="center">
-        <Box borderRadius="50%" width="50px" height="50px">
-          {/* <Image
-            style={{ borderRadius: "50%" }}
-            width="50px"
-            height="50px"
-            src="https://github.com/w1redl4in.png"
-            alt="minha imagem"
-          /> */}
-        </Box>
-        <Text casing="uppercase" fontSize="3xl">
-          Felipe Austríaco
-        </Text>
-      </Flex>
+      <Text minWidth="20%" fontSize="3xl">
+        lain@wired
+      </Text>
 
       <Flex
         alignContent="center"
@@ -38,15 +27,11 @@ export function Header() {
         flexDirection="column"
         m="auto"
       >
-        <Text
-          letterSpacing={2}
-          color="yellow.500"
-          fontWeight="extrabold"
-          colorScheme="yellow"
-        >
-          NIVEL {level}
+        <Text color="yellow.500" fontWeight="extrabold" colorScheme="yellow">
+          LEVEL {level}
         </Text>
         <Progress
+          size="sm"
           my={1}
           borderRadius="20px"
           colorScheme="yellow"
@@ -56,14 +41,8 @@ export function Header() {
           isAnimated
           value={exp}
         />
-        <Text
-          letterSpacing={2}
-          color="yellow.500"
-          fontWeight="extrabold"
-          colorScheme="yellow"
-        >
+        <Text color="yellow.500" fontWeight="extrabold" colorScheme="yellow">
           {isUserAtMaxLevel && "LEVEL MÁXIMO"}
-          {!isUserAtMaxLevel && `EXP ${exp}`}
         </Text>
       </Flex>
 
