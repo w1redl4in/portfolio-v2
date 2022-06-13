@@ -16,6 +16,7 @@ export function Header() {
       p={6}
       mb={2}
       justifyContent="space-between"
+      backdropFilter="blur(8px)"
     >
       <Text
         cursor="pointer"
