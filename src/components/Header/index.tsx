@@ -1,10 +1,13 @@
-import { Flex, Text, Progress, Box } from "@chakra-ui/react";
+import { Flex, Text, Progress, Box, Button } from "@chakra-ui/react";
 // import { Navigation } from "@components/Navigation";
 import { Notifications } from "@components/Notifications";
 import { useExperienceInfo } from "@hooks/use-experience-info";
+import { useResponsive } from "@hooks/use-responsive";
 
 export function Header() {
   const { isUserAtMaxLevel, exp, level } = useExperienceInfo();
+
+  const { isHD, isTablet } = useResponsive();
 
   return (
     <Flex
@@ -14,21 +17,23 @@ export function Header() {
       top={0}
       alignItems="center"
       p={6}
-      mb={2}
       justifyContent="space-between"
       backdropFilter="blur(8px)"
     >
-      <Text
-        cursor="pointer"
-        fontFamily="Indie Flower"
-        minWidth="20%"
-        fontSize="4xl"
-        fontWeight="black"
-        bgGradient="linear(to-r, #F953C6, #B91D73)"
-        bgClip="text"
-      >
-        felipe@austríaco
-      </Text>
+      {!isHD && (
+        <Text
+          cursor="pointer"
+          fontFamily="Indie Flower"
+          minWidth="20%"
+          fontSize="4xl"
+          fontWeight="black"
+          bgGradient="linear(to-r, #F953C6, #B91D73)"
+          bgClip="text"
+        >
+          felipe@austríaco
+        </Text>
+      )}
+
       <Flex
         alignContent="center"
         textAlign="center"
@@ -68,7 +73,7 @@ export function Header() {
         </Text>
       </Flex>
       {/* <Navigation /> */}
-      <Notifications />
+      {!isTablet && <Notifications />}
     </Flex>
   );
 }

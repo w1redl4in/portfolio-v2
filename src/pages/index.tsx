@@ -107,6 +107,7 @@ const Home: NextPage = () => {
         alignItems="center"
         position="relative"
         minHeight="100vh"
+        marginTop={20}
       >
         {isUserAtThisLevel(2) &&
           array.map((a, key) => <span key={key} style={a}></span>)}
