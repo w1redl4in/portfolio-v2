@@ -22,11 +22,12 @@ export function Header() {
         cursor="pointer"
         fontFamily="Indie Flower"
         minWidth="20%"
-        fontSize="3xl"
+        fontSize="4xl"
+        fontWeight="black"
         bgGradient="linear(to-r, #F953C6, #B91D73)"
         bgClip="text"
       >
-        lain@wired
+        felipe@austríaco
       </Text>
       <Flex
         alignContent="center"
