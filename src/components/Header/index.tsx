@@ -1,5 +1,6 @@
 import { Flex, Text, Progress, Box } from "@chakra-ui/react";
-import { Navigation } from "@components/Navigation";
+// import { Navigation } from "@components/Navigation";
+import { Notifications } from "@components/Notifications";
 import { useExperienceInfo } from "@hooks/use-experience-info";
 
 export function Header() {
@@ -21,10 +22,11 @@ export function Header() {
         fontFamily="Indie Flower"
         minWidth="20%"
         fontSize="3xl"
+        bgGradient="linear(to-r, #F953C6, #B91D73)"
+        bgClip="text"
       >
         lain@wired
       </Text>
-
       <Flex
         alignContent="center"
         textAlign="center"
@@ -35,9 +37,10 @@ export function Header() {
       >
         <Text
           fontFamily="Bungee"
-          color="yellow.500"
           fontWeight="extrabold"
           colorScheme="yellow"
+          bgGradient="linear(to-r, #FFE259, #FFA751)"
+          bgClip="text"
         >
           LEVEL {level}
         </Text>
@@ -54,15 +57,16 @@ export function Header() {
         />
         <Text
           fontFamily="Bungee"
-          color="yellow.500"
           fontWeight="extrabold"
           colorScheme="yellow"
+          bgGradient="linear(to-r, #FFE259, #FFA751)"
+          bgClip="text"
         >
           {isUserAtMaxLevel && "LEVEL MÁXIMO"}
         </Text>
       </Flex>
-
-      <Navigation />
+      {/* <Navigation /> */}
+      <Notifications />
     </Flex>
   );
 }
