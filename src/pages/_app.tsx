@@ -3,11 +3,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { GamificationModalRoot } from "@gamification/index";
 import { Provider } from "react-redux";
 import { store } from "@redux/store";
+import { Fonts } from "@components/Fonts";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Provider store={store}>
+        <Fonts />
         <Component {...pageProps} />
         <GamificationModalRoot />
       </Provider>

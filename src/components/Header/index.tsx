@@ -16,22 +16,33 @@ export function Header() {
       mb={2}
       justifyContent="space-between"
     >
-      <Text minWidth="20%" fontSize="3xl">
+      <Text
+        cursor="pointer"
+        fontFamily="Indie Flower"
+        minWidth="20%"
+        fontSize="3xl"
+      >
         lain@wired
       </Text>
 
       <Flex
         alignContent="center"
         textAlign="center"
-        minW="25rem"
+        maxW="40rem"
+        w="100%"
         flexDirection="column"
         m="auto"
       >
-        <Text color="yellow.500" fontWeight="extrabold" colorScheme="yellow">
+        <Text
+          fontFamily="Bungee"
+          color="yellow.500"
+          fontWeight="extrabold"
+          colorScheme="yellow"
+        >
           LEVEL {level}
         </Text>
         <Progress
-          size="sm"
+          size="xs"
           my={1}
           borderRadius="20px"
           colorScheme="yellow"
@@ -39,9 +50,14 @@ export function Header() {
           max={100}
           hasStripe
           isAnimated
-          value={exp}
+          value={isUserAtMaxLevel ? 100 : exp}
         />
-        <Text color="yellow.500" fontWeight="extrabold" colorScheme="yellow">
+        <Text
+          fontFamily="Bungee"
+          color="yellow.500"
+          fontWeight="extrabold"
+          colorScheme="yellow"
+        >
           {isUserAtMaxLevel && "LEVEL MÁXIMO"}
         </Text>
       </Flex>
