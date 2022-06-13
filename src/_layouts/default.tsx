@@ -15,6 +15,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
       justifyContent="space-between"
       flexDirection="column"
       minH="100vh"
+      w="100%"
     >
       <Header />
       {children}
