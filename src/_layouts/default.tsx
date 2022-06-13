@@ -10,7 +10,12 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
   useCountExperience();
 
   return (
-    <Flex justifyContent="space-between" flexDirection="column" minH="100vh">
+    <Flex
+      background="background"
+      justifyContent="space-between"
+      flexDirection="column"
+      minH="100vh"
+    >
       <Header />
       {children}
       {/* <Footer /> */}

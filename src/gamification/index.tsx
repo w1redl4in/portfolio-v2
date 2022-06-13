@@ -40,7 +40,7 @@ export function GamificationModalRoot() {
       onClose={() => {}}
     >
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent background="background">
         <ModalHeader textAlign="center" />
         <ModalBody>
           <Component />
