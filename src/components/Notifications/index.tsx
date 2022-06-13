@@ -6,6 +6,7 @@ export function Notifications() {
     <Menu>
       <MenuButton
         minW="20%"
+        variant="ghost"
         size="lg"
         as={Button}
         rightIcon={<MdNotificationsActive size={25} />}
@@ -13,6 +14,7 @@ export function Notifications() {
         <Text
           fontFamily="Indie Flower"
           fontSize="2xl"
+          fontWeight="black"
           bgGradient="linear(to-r, #4CB8C4, #3CD3AD)"
           bgClip="text"
         >
