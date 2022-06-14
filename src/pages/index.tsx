@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         justifyContent="center"
         alignItems="center"
         position="relative"
-        minHeight="100vh"
+        minHeight="calc(100vh - 108px)"
         marginTop={20}
       >
         <Heading color="white" fontFamily="Heebo">
@@ -70,28 +70,28 @@ const Home: NextPage = () => {
             <Stack textAlign={["center", "center", "center", "right"]}>
               <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
                 Como você já sabe, meu nome é Felipe Austríaco, <br /> tenho 26
-                anos e sou desenvolvedor há 3 anos.
+                anos e sou desenvolvedor há 3 anos. 😁
               </Text>
 
               <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
                 Um homem com dois amores, front-end e back-end, <br /> apesar de
-                ter uma queda maior pelo front.
+                ter uma queda maior pelo front. 🥰
               </Text>
 
               <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
-                Minhas tecnologias favoritas são: React, Node e TypeScript!
+                Minhas tecnologias favoritas são: React, Node e TypeScript! 🧑🏽‍💻
               </Text>
 
               <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
                 Atualmente o meu foco de estudos está mais nos conceitos como
                 Arquiteturas, <br />
-                Design Patterns e SOLID.
+                Design Patterns e SOLID. 🧠
               </Text>
 
               <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
                 No tempo livre curto jogar de tudo, assistir
                 séries/filmes/animes e <br /> fazer um churrasquinho com a
-                família e amigos
+                família e amigos! 🥩🎞️🎮
               </Text>
             </Stack>
           </Flex>
