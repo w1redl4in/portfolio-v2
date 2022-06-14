@@ -1,13 +1,9 @@
-import { Flex, Text, Progress, Box, Button } from "@chakra-ui/react";
+import { Flex, Text, Progress } from "@chakra-ui/react";
 // import { Navigation } from "@components/Navigation";
-import { Notifications } from "@components/Notifications";
 import { useExperienceInfo } from "@hooks/use-experience-info";
-import { useResponsive } from "@hooks/use-responsive";
 
 export function Header() {
   const { isUserAtMaxLevel, exp, level } = useExperienceInfo();
-
-  const { isHD, isTablet } = useResponsive();
 
   return (
     <Flex
