@@ -38,6 +38,7 @@ export function GamificationModalRoot() {
       isCentered
       isOpen={isGamificationModalOpen}
       onClose={() => {}}
+      preserveScrollBarGap
     >
       <ModalOverlay />
       <ModalContent background="background">
