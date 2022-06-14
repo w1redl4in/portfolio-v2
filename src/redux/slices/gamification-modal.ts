@@ -1,5 +1,5 @@
-import { GamificationIntroductionModal } from "@gamification/introduction";
-import { GamificationModalLevel2 } from "@gamification/level-2";
+import { GamificationIntroductionModal } from "@gamification/modals/introduction";
+import { GamificationModalLevel2 } from "@gamification/modals/level-2";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "redux/store";
 
