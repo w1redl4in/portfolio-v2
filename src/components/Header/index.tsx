@@ -20,7 +20,7 @@ export function Header() {
       justifyContent="space-between"
       backdropFilter="blur(8px)"
     >
-      {!isHD && (
+      {/* {!isHD && (
         <Text
           cursor="pointer"
           fontFamily="Indie Flower"
@@ -32,7 +32,7 @@ export function Header() {
         >
           felipe@austríaco
         </Text>
-      )}
+      )} */}
 
       <Flex
         alignContent="center"
@@ -73,7 +73,7 @@ export function Header() {
         </Text>
       </Flex>
       {/* <Navigation /> */}
-      {!isTablet && <Notifications />}
+      {/* {!isTablet && <Notifications />} */}
     </Flex>
   );
 }
