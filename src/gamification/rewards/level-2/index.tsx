@@ -1,8 +1,27 @@
 import { CSSProperties, useMemo } from "react";
+import { motion } from "framer-motion";
 
 interface FloatIcons extends CSSProperties {
   iconName?: any;
 }
+
+const imageVariants = {
+  visible: {
+    y: 25,
+    transition: {
+      duration: 2,
+      yoyo: Infinity,
+    },
+  },
+  hover: {
+    scale: 1.5,
+    rotate: 360,
+  },
+  tap: {
+    scale: 1.5,
+    rotate: 360,
+  },
+};
 export function Level_2Reward() {
   const array: FloatIcons[] = useMemo(() => {
     return [
@@ -10,8 +29,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "react.svg",
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         top: "10%",
         bottom: 1,
         right: 1,
@@ -21,8 +40,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "favicon.ico",
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         // background: "red",
         top: "15%",
         bottom: 1,
@@ -33,8 +52,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "vim.svg",
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         top: "25%",
         bottom: 1,
         right: 1,
@@ -44,8 +63,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "vscode.svg",
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         // background: "red",
         top: "45%",
         bottom: 1,
@@ -56,8 +75,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "npm.svg",
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         // background: "blue",
         top: "30%",
         bottom: 1,
@@ -80,8 +99,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "github.svg",
-        width: 40,
-        height: 40,
+        width: 60,
+        height: 60,
         // background: "red",
         top: "70%",
         bottom: 1,
@@ -104,8 +123,8 @@ export function Level_2Reward() {
         zIndex: 1,
         position: "absolute",
         iconName: "insomnia.svg",
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         // background: "red",
         top: "90%",
         bottom: 1,
@@ -119,7 +138,19 @@ export function Level_2Reward() {
     <>
       {array.map((a, key) => (
         <span key={key} style={a}>
-          <img src={a.iconName} alt={a.iconName} />
+          <motion.img
+            style={{
+              cursor: "pointer",
+
+              zIndex: -999,
+            }}
+            whileHover="hover"
+            whileTap="tap"
+            variants={imageVariants}
+            animate="visible"
+            src={a.iconName}
+            alt={a.iconName}
+          />
         </span>
       ))}
     </>
