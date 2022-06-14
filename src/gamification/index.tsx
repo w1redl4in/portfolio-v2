@@ -34,7 +34,7 @@ export function GamificationModalRoot() {
 
   return (
     <Modal
-      size="lg"
+      size={["xs", "md", "lg", "lg"]}
       isCentered
       isOpen={isGamificationModalOpen}
       onClose={() => {}}
