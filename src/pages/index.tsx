@@ -51,12 +51,12 @@ const Home: NextPage = () => {
             <Image
               marginBottom={["3rem", "3rem", "3rem", "0"]}
               maxW="350px"
-              boxShadow="rgba(255, 255, 255, 0.25) 0px 25px 50px -12px"
+              boxShadow="rgba(255, 216, 88, 0.8) 5px 5px, rgba(255, 216, 88, 0.4) 10px 10px, rgba(255, 216, 88, 0.3) 15px 15px, rgba(255, 216, 88, 0.2) 20px 20px, rgba(255, 216, 88, 0.04) 25px 25px"
               w="100%"
               height="auto"
               src="https://avatars.githubusercontent.com/u/43390533?v=4"
               alt="me"
-              borderRadius="base"
+              borderRadius="lg"
             />
             <Stack
               pl={["0", "0", "0", "7rem"]}
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                 <Text
                   fontSize="3xl"
                   fontWeight="medium"
-                  bgGradient="linear(#00F5A0, #00D9F5)"
+                  bgGradient="linear(to-r, #00F5A0, #00D9F5)"
                   bgClip="text"
                   fontFamily="Heebo"
                   textAlign={["center", "center", "center", "center"]}
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
           <Text
             fontSize="4xl"
             fontWeight="medium"
-            bgGradient="linear(#FF8008, #FFC837)"
+            bgGradient="linear(to-r,#FF8008, #FFC837)"
             bgClip="text"
             fontFamily="Heebo"
             textAlign={["center", "center", "center", "inherit"]}
