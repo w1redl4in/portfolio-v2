@@ -6,14 +6,14 @@ export function GamificationModalLevel2() {
       <Heading color="yellow.400" size="lg">
         Level up!
       </Heading>
-      <Text>Você alcançou o nível 2!</Text>
+      <Text color="white">Você alcançou o nível 2!</Text>
 
-      <Text>
+      <Text color="white">
         Agora conseguirá ver as tecnologias que mais gosto <br />
         flutuando pelo site.
       </Text>
 
-      <Text>Divirta-se!</Text>
+      <Text color="white">Divirta-se!</Text>
     </Stack>
   );
 }

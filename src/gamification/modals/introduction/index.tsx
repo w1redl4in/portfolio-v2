@@ -43,7 +43,7 @@ export function GamificationIntroductionModal() {
     <Stack>
       {icons.map((icon) => (
         <HStack textAlign="center" key={icon.text}>
-          <Text fontFamily="Heebo">
+          <Text color="white" fontFamily="Heebo">
             {icon.text}&nbsp;
             <Icon color={icon.color} w={6} h={6} as={icon.icon} />
           </Text>
