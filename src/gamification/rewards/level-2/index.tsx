@@ -1,13 +1,17 @@
 import { CSSProperties, useMemo } from "react";
+
+interface FloatIcons extends CSSProperties {
+  iconName?: any;
+}
 export function Level_2Reward() {
-  const array: CSSProperties[] = useMemo(() => {
+  const array: FloatIcons[] = useMemo(() => {
     return [
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "blue",
+        iconName: "react.svg",
+        width: 30,
+        height: 30,
         top: "10%",
         bottom: 1,
         right: 1,
@@ -16,9 +20,10 @@ export function Level_2Reward() {
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
+        iconName: "favicon.ico",
+        width: 30,
+        height: 30,
+        // background: "red",
         top: "15%",
         bottom: 1,
         right: 1,
@@ -27,20 +32,21 @@ export function Level_2Reward() {
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
-        top: "20%",
+        iconName: "vim.svg",
+        width: 30,
+        height: 30,
+        top: "25%",
         bottom: 1,
         right: 1,
-        left: "50%",
+        left: "10%",
       },
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
+        iconName: "vscode.svg",
+        width: 30,
+        height: 30,
+        // background: "red",
         top: "45%",
         bottom: 1,
         right: 1,
@@ -49,21 +55,23 @@ export function Level_2Reward() {
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "blue",
+        iconName: "npm.svg",
+        width: 40,
+        height: 40,
+        // background: "blue",
         top: "30%",
         bottom: 1,
         right: 1,
-        left: "95%",
+        left: "85%",
       },
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
-        top: "80%",
+        iconName: "node.svg",
+        width: 50,
+        height: 50,
+        // background: "red",
+        top: "76%",
         bottom: 1,
         right: 1,
         left: "5%",
@@ -71,9 +79,10 @@ export function Level_2Reward() {
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
+        iconName: "github.svg",
+        width: 40,
+        height: 40,
+        // background: "red",
         top: "70%",
         bottom: 1,
         right: 1,
@@ -82,13 +91,26 @@ export function Level_2Reward() {
       {
         zIndex: 1,
         position: "absolute",
-        width: 20,
-        height: 20,
-        background: "red",
+        iconName: "ts.svg",
+        width: 30,
+        height: 30,
+        // background: "red",
         top: "80%",
         bottom: 1,
         right: 1,
         left: "90%",
+      },
+      {
+        zIndex: 1,
+        position: "absolute",
+        iconName: "insomnia.svg",
+        width: 30,
+        height: 30,
+        // background: "red",
+        top: "90%",
+        bottom: 1,
+        right: 1,
+        left: "63%",
       },
     ];
   }, []);
@@ -96,7 +118,9 @@ export function Level_2Reward() {
   return (
     <>
       {array.map((a, key) => (
-        <span key={key} style={a}></span>
+        <span key={key} style={a}>
+          <img src={a.iconName} alt={a.iconName} />
+        </span>
       ))}
     </>
   );
