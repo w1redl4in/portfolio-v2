@@ -1,5 +1,6 @@
 import { GamificationIntroductionModal } from "@gamification/modals/introduction";
 import { GamificationModalLevel2 } from "@gamification/modals/level-2";
+import { GamificationModalMaxLevel } from "@gamification/modals/max-level";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "redux/store";
 
@@ -8,6 +9,7 @@ export enum GamificationModalEnum {
   INTRODUCTION,
   LEVEL_2,
   LEVEL_3,
+  MAX_LEVEL,
 }
 
 export const GamificationModalMap = new Map();
@@ -19,6 +21,11 @@ GamificationModalMap.set(
 GamificationModalMap.set(
   GamificationModalEnum.LEVEL_2,
   GamificationModalLevel2
+);
+
+GamificationModalMap.set(
+  GamificationModalEnum.MAX_LEVEL,
+  GamificationModalMaxLevel
 );
 
 const initialState = {
