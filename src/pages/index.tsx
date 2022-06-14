@@ -60,35 +60,35 @@ const Home: NextPage = () => {
           >
             <Image
               marginBottom={["3rem", "3rem", "3rem", "0"]}
-              maxW="300px"
+              maxW="350px"
               w="100%"
               height="auto"
               src="https://avatars.githubusercontent.com/u/43390533?v=4"
               alt="me"
-              borderRadius="50%"
+              borderRadius="base"
             />
             <Stack textAlign={["center", "center", "center", "right"]}>
-              <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
+              <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 Como você já sabe, meu nome é Felipe Austríaco, <br /> tenho 26
                 anos e sou desenvolvedor há 3 anos. 😁
               </Text>
 
-              <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
+              <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 Um homem com dois amores, front-end e back-end, <br /> apesar de
                 ter uma queda maior pelo front. 🥰
               </Text>
 
-              <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
+              <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 Minhas tecnologias favoritas são: React, Node e TypeScript! 🧑🏽‍💻
               </Text>
 
-              <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
+              <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 Atualmente o meu foco de estudos está mais nos conceitos como
                 Arquiteturas, <br />
                 Design Patterns e SOLID. 🧠
               </Text>
 
-              <Text fontFamily="Heebo" fontSize="2xl" color="textSecondary">
+              <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 No tempo livre curto jogar de tudo, assistir
                 séries/filmes/animes e <br /> fazer um churrasquinho com a
                 família e amigos! 🥩🎞️🎮
@@ -116,6 +116,7 @@ const Home: NextPage = () => {
             bgGradient="linear(#FF8008, #FFC837)"
             bgClip="text"
             fontFamily="Heebo"
+            textAlign={["center", "center", "center", "inherit"]}
           >
             Carreira
           </Text>
