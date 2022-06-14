@@ -15,14 +15,16 @@ const Home: NextPage = () => {
         minHeight="100vh"
         marginTop={20}
       >
-        <Heading fontFamily="Heebo">👋 Olá, Eu sou o Felipe Austríaco</Heading>
+        <Heading color="white" fontFamily="Heebo">
+          👋 Olá, Eu sou o Felipe Austríaco
+        </Heading>
         <br />
-        <Heading fontFamily="Heebo" lineHeight={1.2} size="3xl">
+        <Heading color="white" fontFamily="Heebo" lineHeight={1.2} size="3xl">
           Software Engineer <br /> lorem ipsum dolor <br /> lorem ipsum dolor
           lorem ipsum dolor
         </Heading>
         <br />
-        <Text fontFamily="Heebo" fontWeight="medium">
+        <Text color="white" fontFamily="Heebo" fontWeight="medium">
           lorem ipsum dolor lorem ipsum dolor @{" "}
           <strong style={{ color: "#ffd900" }}>Mercado Livre</strong>
         </Text>
@@ -61,7 +63,7 @@ const Home: NextPage = () => {
             src="https://avatars.githubusercontent.com/u/43390533?v=4"
             alt="me"
           />
-          <Text fontFamily="Heebo" p={10}>
+          <Text color="white" fontFamily="Heebo" p={10}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />{" "}
             Gravida morbi pulvinar sit morbi viverra nisl sagittis, placerat.{" "}
             <br />
