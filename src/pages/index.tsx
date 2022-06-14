@@ -16,13 +16,13 @@ const Home: NextPage = () => {
         minHeight="calc(100vh - 108px)"
         marginTop={20}
       >
-        <Heading color="white" fontFamily="Heebo">
+        <Heading size="xl" color="white" fontFamily="Heebo">
           👋 Olá, Eu sou o Felipe Austríaco
         </Heading>
         <br />
-        <Heading color="white" fontFamily="Heebo" lineHeight={1.2} size="3xl">
+        <Heading size="xl" color="white" fontFamily="Heebo" lineHeight={1.2}>
           Software Engineer <br /> pensando em algo muito legal <br /> para
-          colocar aqui
+          colocar aqui!
         </Heading>
         <br />
         <Text color="white" fontFamily="Heebo" fontWeight="medium">
