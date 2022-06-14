@@ -105,12 +105,13 @@ const Home: NextPage = () => {
                 Analisa de Desenvolvimento de Software
               </Text>
               <Flex>
-                <Link href="test" color="white">
+                <Link href="test">
                   <Text
                     cursor="pointer"
                     textDecor="underline"
                     fontWeight="medium"
                     fontFamily="Heebo"
+                    color="#0086FF"
                   >
                     Hub Fintech / Fintech Magalu / Magalu
                   </Text>
