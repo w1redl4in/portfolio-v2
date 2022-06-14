@@ -43,20 +43,10 @@ const Home: NextPage = () => {
           maxW="70rem"
           w="100%"
         >
-          <Text
-            fontSize="4xl"
-            fontWeight="medium"
-            bgGradient="linear(#00F5A0, #00D9F5)"
-            bgClip="text"
-            fontFamily="Heebo"
-            textAlign={["center", "center", "center", "inherit"]}
-          >
-            Sobre mim
-          </Text>
           <Flex
             flexDirection={["column", "column", "column", "row"]}
             alignItems="center"
-            justifyContent="space-between"
+            justifyContent="center"
           >
             <Image
               marginBottom={["3rem", "3rem", "3rem", "0"]}
@@ -68,7 +58,24 @@ const Home: NextPage = () => {
               alt="me"
               borderRadius="base"
             />
-            <Stack textAlign={["center", "center", "center", "right"]}>
+            <Stack
+              pl={["0", "0", "0", "7rem"]}
+              textAlign={["center", "center", "center", "left"]}
+            >
+              <Flex
+                justifyContent={["center", "center", "center", "flex-start"]}
+              >
+                <Text
+                  fontSize="3xl"
+                  fontWeight="medium"
+                  bgGradient="linear(#00F5A0, #00D9F5)"
+                  bgClip="text"
+                  fontFamily="Heebo"
+                  textAlign={["center", "center", "center", "center"]}
+                >
+                  Sobre mim
+                </Text>
+              </Flex>
               <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
                 Como você já sabe, meu nome é Felipe Austríaco, <br /> tenho 26
                 anos e sou desenvolvedor há 3 anos. 😁
