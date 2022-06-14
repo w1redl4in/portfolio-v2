@@ -61,6 +61,7 @@ const Home: NextPage = () => {
             <Image
               marginBottom={["3rem", "3rem", "3rem", "0"]}
               maxW="350px"
+              boxShadow="rgba(255, 255, 255, 0.25) 0px 25px 50px -12px"
               w="100%"
               height="auto"
               src="https://avatars.githubusercontent.com/u/43390533?v=4"
