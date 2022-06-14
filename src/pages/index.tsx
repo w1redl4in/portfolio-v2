@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           <Text
             fontSize="4xl"
             fontWeight="medium"
-            bgGradient="linear(to-r, #00F5A0, #00D9F5)"
+            bgGradient="linear(#00F5A0, #00D9F5)"
             bgClip="text"
             fontFamily="Heebo"
             textAlign={["center", "center", "center", "inherit"]}
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
           <Text
             fontSize="4xl"
             fontWeight="medium"
-            bgGradient="linear(to-r, #FF8008, #FFC837)"
+            bgGradient="linear(#FF8008, #FFC837)"
             bgClip="text"
             fontFamily="Heebo"
           >
