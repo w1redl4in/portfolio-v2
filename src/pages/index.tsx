@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                 Analisa de Desenvolvimento de Software
               </Text>
               <Flex>
-                <Link href="https://fintechmagalu.com.br">
+                <Link target="_blank" href="https://fintechmagalu.com.br">
                   <Text
                     cursor="pointer"
                     textDecor="underline"
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
                 Software Engineer
               </Text>
               <Flex>
-                <Link href="https://www.mercadolivre.com.br">
+                <Link target="_blank" href="https://www.mercadolivre.com.br">
                   <Text
                     cursor="pointer"
                     textDecor="underline"
