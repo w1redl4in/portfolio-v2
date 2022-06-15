@@ -25,9 +25,9 @@ const Home: NextPage = () => {
           {showIntroduction && (
             <Typ
               cursor=" "
-              typingDelay={100}
+              typingDelay={50}
               eraseDelay={10000 * 10000}
-              speed={50}
+              speed={25}
               text={["Olá, Eu sou o Felipe Austríaco 👋"]}
             />
           )}
@@ -35,11 +35,11 @@ const Home: NextPage = () => {
         <Heading size="xl" color="white" fontFamily="Heebo">
           {showIntroduction && (
             <Typ
-              cursor=" "
-              typingDelay={2500}
-              eraseDelay={10000 * 10000}
+              typingDelay={1000}
+              eraseDelay={1000}
               speed={50}
-              text={["Software Engineer"]}
+              eraseSpeed={50}
+              text={["Software Engineer 🧑🏽‍💻 ", "Gamer 🎮", "Self Taught 🤓"]}
             />
           )}
         </Heading>
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           {showIntroduction && (
             <Typ
               cursor=" "
-              typingDelay={4000}
+              typingDelay={2000}
               eraseDelay={10000 * 10000}
               speed={50}
               text={["Criando experiências únicas através do código"]}
