@@ -24,7 +24,8 @@
       "@icons": ["icons/index"],
       "@constants/*": ["constants/*"],
       "@hooks/*": ["hooks/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@modules/*": ["modules/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
