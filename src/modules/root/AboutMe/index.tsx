@@ -22,10 +22,10 @@ export function AboutMe() {
           <Image
             marginBottom={["3rem", "3rem", "3rem", "0"]}
             maxW="350px"
-            boxShadow="rgba(255, 216, 88, 0.8) 5px 5px, rgba(255, 216, 88, 0.4) 10px 10px, rgba(255, 216, 88, 0.3) 15px 15px, rgba(255, 216, 88, 0.2) 20px 20px, rgba(255, 216, 88, 0.04) 25px 25px"
+            opacity={0.7}
             w="100%"
             height="auto"
-            src="https://avatars.githubusercontent.com/u/43390533?v=4"
+            src="me.jpg"
             alt="me"
             borderRadius="lg"
           />
