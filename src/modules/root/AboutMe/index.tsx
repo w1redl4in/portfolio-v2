@@ -1,6 +1,42 @@
 import { Flex, Stack, Text, Image } from "@chakra-ui/react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+const imageVariants = {
+  hidden: {
+    x: -500,
+    opacity: 0,
+    rotate: 720,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  whileHover: {
+    borderRadius: "50%",
+  },
+  whileTap: {
+    borderRadius: "50%",
+  },
+};
 
 export function AboutMe() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <Flex
       alignItems="center"
@@ -20,6 +56,13 @@ export function AboutMe() {
           justifyContent="center"
         >
           <Image
+            ref={ref}
+            as={motion.img}
+            variants={imageVariants}
+            initial="hidden"
+            animate={control}
+            whileHover="whileHover"
+            whileTap="whileTap"
             marginBottom={["3rem", "3rem", "3rem", "0"]}
             maxW="350px"
             opacity={0.7}
