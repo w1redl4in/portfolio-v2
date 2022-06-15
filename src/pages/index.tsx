@@ -2,8 +2,13 @@ import type { NextPage } from "next";
 import { DefaultLayout } from "@layouts/default";
 import { Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import Typ from "react-typing-effect";
+import { useAppSelector } from "@redux/hooks";
+import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
 
 const Home: NextPage = () => {
+  const { showIntroduction } = useAppSelector(selectPortfolioBehavior);
+
   return (
     <DefaultLayout>
       <Flex
@@ -17,17 +22,65 @@ const Home: NextPage = () => {
         marginTop={20}
       >
         <Heading size="xl" color="white" fontFamily="Heebo">
-          👋 Olá, Eu sou o Felipe Austríaco
+          {showIntroduction && (
+            <Typ
+              cursor=" "
+              typingDelay={100}
+              eraseDelay={10000 * 10000}
+              speed={50}
+              text={["Olá, Eu sou o Felipe Austríaco 👋"]}
+            />
+          )}
         </Heading>
-        <br />
-        <Heading size="xl" color="white" fontFamily="Heebo" lineHeight={1.2}>
-          Software Engineer <br /> pensando em algo muito legal <br /> para
-          colocar aqui!
+        <Heading size="xl" color="white" fontFamily="Heebo">
+          {showIntroduction && (
+            <Typ
+              cursor=" "
+              typingDelay={2500}
+              eraseDelay={10000 * 10000}
+              speed={50}
+              text={["Software Engineer"]}
+            />
+          )}
         </Heading>
-        <br />
-        <Text color="white" fontFamily="Heebo" fontWeight="medium">
-          Atualmente desenvolvendo @{" "}
-          <strong style={{ color: "#ffd900" }}>Mercado Livre</strong>
+        <Heading size="xl" color="white" fontFamily="Heebo">
+          {showIntroduction && (
+            <Typ
+              cursor=" "
+              typingDelay={4000}
+              eraseDelay={10000 * 10000}
+              speed={50}
+              text={["Criando experiências únicas através do código"]}
+            />
+          )}
+        </Heading>
+        <Text fontFamily="Heebo" fontWeight="medium" color="white">
+          {showIntroduction && (
+            <Typ
+              cursor=" "
+              typingDelay={7000}
+              eraseDelay={10000 * 10000}
+              speed={50}
+              text={["Atualmente desenvolvendo @ Mercado Livre"]}
+              displayTextRenderer={(text, i) => {
+                return (
+                  <h1>
+                    {text.split("").map((char, i) => {
+                      const key = `${i}`;
+                      return (
+                        <span
+                          key={key}
+                          style={i > 24 ? { color: "#FFD858" } : {}}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })}
+                  </h1>
+                );
+              }}
+            />
+          )}
         </Text>
       </Flex>
 
