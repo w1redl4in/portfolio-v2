@@ -23,14 +23,12 @@ export function Career() {
   const hubFintechAnimation = {
     hidden: {
       opacity: 0,
-      x: "-10vw",
       transition: {
         delay: 0.5,
       },
     },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
         type: "spring",
         bounce: 0.6,
@@ -41,11 +39,9 @@ export function Career() {
   const meliAnimation = {
     hidden: {
       opacity: 0,
-      x: "10vw",
     },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
         type: "spring",
         bounce: 0.7,
