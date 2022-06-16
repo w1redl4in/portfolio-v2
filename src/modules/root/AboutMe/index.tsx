@@ -1,33 +1,41 @@
 import { Flex, Stack, Text, Image } from "@chakra-ui/react";
+import { useResponsive } from "@hooks/use-responsive";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useInView } from "react-intersection-observer";
-
-const imageVariants = {
-  hidden: {
-    x: -300,
-    opacity: 0,
-    rotate: 720,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    rotate: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  whileHover: {
-    borderRadius: "50%",
-  },
-  whileTap: {
-    borderRadius: "50%",
-  },
-};
 
 export function AboutMe() {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const { isTablet, isMobile } = useResponsive();
+
+  const imageVariants = {
+    hidden: {
+      x: "-30vw",
+      opacity: 0,
+      rotate: 720,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    whileHover: {
+      borderRadius: "50%",
+    },
+    whileTap: {
+      borderRadius: "50%",
+    },
+  };
+
+  const maxWidthImage = useMemo(() => {
+    if (isTablet) return "250px";
+    if (isMobile) return "200px";
+    return "400px";
+  }, [isMobile, isTablet]);
 
   useEffect(() => {
     if (inView) {
@@ -64,7 +72,7 @@ export function AboutMe() {
             whileHover="whileHover"
             whileTap="whileTap"
             marginBottom={["3rem", "3rem", "3rem", "0"]}
-            maxW="350px"
+            maxW={maxWidthImage}
             opacity={0.7}
             w="100%"
             height="auto"
