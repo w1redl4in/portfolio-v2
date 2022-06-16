@@ -185,7 +185,7 @@ export function Level_2Reward() {
         iconName: "yarn.svg",
         width: 40,
         height: 40,
-        top: "97.5%",
+        top: "96.5%",
         bottom: 1,
         right: 1,
         left: "23%",
