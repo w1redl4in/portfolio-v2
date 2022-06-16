@@ -24,9 +24,15 @@ export function AboutMe() {
     },
     whileHover: {
       scale: 1.1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
     },
     whileTap: {
       scale: 1.1,
+      duration: 0.5,
+      ease: "easeInOut",
     },
   };
 
