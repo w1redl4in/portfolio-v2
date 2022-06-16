@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const imageVariants = {
   hidden: {
-    x: -500,
+    x: -300,
     opacity: 0,
     rotate: 720,
   },
