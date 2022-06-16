@@ -1,7 +1,79 @@
 import { Flex, Stack, Image, Text } from "@chakra-ui/react";
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export function Career() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const containerAnimation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+      },
+    },
+  };
+
+  const hubFintechAnimation = {
+    hidden: {
+      opacity: 0,
+      x: "-10vw",
+      transition: {
+        delay: 0.5,
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.6,
+      },
+    },
+  };
+
+  const meliAnimation = {
+    hidden: {
+      opacity: 0,
+      x: "10vw",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.7,
+      },
+    },
+  };
+
+  const imageAnimations = {
+    hidden: {
+      scale: 0,
+    },
+    visible: {
+      scale: 1.03,
+      transition: {
+        delay: 1,
+        duration: 0.2,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <Flex
       alignItems="center"
@@ -14,6 +86,11 @@ export function Career() {
         spacing={["10rem", "10rem", "10rem", "1rem"]}
         maxW="70rem"
         w="100%"
+        as={motion.div}
+        ref={ref}
+        variants={containerAnimation}
+        initial="hidden"
+        animate={control}
       >
         <Text
           fontSize="4xl"
@@ -29,6 +106,8 @@ export function Career() {
           flexDirection={["column", "column", "column", "row"]}
           alignItems="center"
           justifyContent="space-between"
+          as={motion.div}
+          variants={hubFintechAnimation}
         >
           <Stack textAlign={["center", "center", "center", "left"]}>
             <Text fontFamily="Heebo" color="white" fontWeight="semibold">
@@ -43,7 +122,7 @@ export function Career() {
                   fontFamily="Heebo"
                   color="#0086FF"
                 >
-                  Hub Fintech / Fintech Magalu / Magalu
+                  Hub Fintech - Fintech Magalu
                 </Text>
               </Link>
               <Text
@@ -59,6 +138,11 @@ export function Career() {
             </Text>
           </Stack>
           <Image
+            as={motion.img}
+            variants={imageAnimations}
+            whileHover="whileHover"
+            initial="hidden"
+            animate={control}
             height="auto"
             borderRadius="10px"
             maxW="400px"
@@ -68,6 +152,8 @@ export function Career() {
           />
         </Flex>
         <Flex
+          as={motion.div}
+          variants={meliAnimation}
           flexDirection={[
             "column-reverse",
             "column-reverse",
@@ -83,6 +169,10 @@ export function Career() {
             maxW="400px"
             w="100%"
             src="meli.png"
+            as={motion.img}
+            variants={imageAnimations}
+            initial="hidden"
+            animate={control}
             alt="hub fintech empresa"
           />
           <Stack textAlign={["center", "center", "center", "right"]}>
