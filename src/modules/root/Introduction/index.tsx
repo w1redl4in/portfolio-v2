@@ -33,7 +33,8 @@ export function Introduction() {
             typingDelay={50}
             eraseDelay={10000 * 10000}
             speed={25}
-            text={["Olá, Eu sou o Felipe Austríaco 👋"]}
+            // 👋
+            text={["Olá, Eu sou o Felipe Austríaco."]}
           />
         )}
       </Heading>
