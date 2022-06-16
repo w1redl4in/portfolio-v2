@@ -1,10 +1,19 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
+import { useResponsive } from "@hooks/use-responsive";
 import { useAppSelector } from "@redux/hooks";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
+import { useMemo } from "react";
 import ReactTypingEffect from "react-typing-effect";
 
 export function Introduction() {
   const { showIntroduction } = useAppSelector(selectPortfolioBehavior);
+  const { isTablet } = useResponsive();
+
+  const containerMinHeight = useMemo(() => {
+    if (!isTablet) return "calc(100vh - 108px)";
+
+    return "100vh";
+  }, [isTablet]);
 
   return (
     <Flex
@@ -14,7 +23,7 @@ export function Introduction() {
       justifyContent="center"
       alignItems="center"
       position="relative"
-      minHeight="calc(100vh - 108px)"
+      minHeight={containerMinHeight}
       marginTop={20}
     >
       <Heading size="xl" color="white" fontFamily="Heebo">
