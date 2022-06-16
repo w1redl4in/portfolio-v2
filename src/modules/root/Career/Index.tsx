@@ -59,10 +59,6 @@ export function Career() {
     },
     visible: {
       scale: 1.03,
-      transition: {
-        delay: 1,
-        duration: 0.2,
-      },
     },
   };
 
