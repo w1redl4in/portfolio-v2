@@ -8,6 +8,8 @@ interface FloatIcons extends CSSProperties {
 const imageVariants = {
   visible: {
     y: 35,
+    scale: 1.2,
+    rotate: [16, -16],
     transition: {
       duration: 3,
       yoyo: Infinity,
