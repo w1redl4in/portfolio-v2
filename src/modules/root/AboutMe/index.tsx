@@ -13,14 +13,13 @@ export function AboutMe() {
     hidden: {
       x: "-30vw",
       opacity: 0,
-      rotate: 720,
     },
     visible: {
       x: 0,
       opacity: 1,
       rotate: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.7,
       },
     },
     whileHover: {
@@ -73,7 +72,6 @@ export function AboutMe() {
             whileTap="whileTap"
             marginBottom={["3rem", "3rem", "3rem", "0"]}
             maxW={maxWidthImage}
-            opacity={0.7}
             w="100%"
             height="auto"
             src="me.jpeg"
