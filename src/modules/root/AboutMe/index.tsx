@@ -24,10 +24,10 @@ export function AboutMe() {
       },
     },
     whileHover: {
-      borderRadius: "50%",
+      scale: 1.1,
     },
     whileTap: {
-      borderRadius: "50%",
+      scale: 1.1,
     },
   };
 
@@ -76,7 +76,7 @@ export function AboutMe() {
             opacity={0.7}
             w="100%"
             height="auto"
-            src="me.jpg"
+            src="me.jpeg"
             alt="me"
             borderRadius="lg"
           />
