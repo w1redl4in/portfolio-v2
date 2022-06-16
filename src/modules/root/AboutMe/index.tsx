@@ -11,7 +11,7 @@ export function AboutMe() {
 
   const imageVariants = {
     hidden: {
-      x: "-30vw",
+      x: "-20vw",
       opacity: 0,
     },
     visible: {
