@@ -42,9 +42,9 @@ export function Introduction() {
           <ReactTypingEffect
             typingDelay={1000}
             eraseDelay={1000}
-            speed={50}
+            speed={75}
             eraseSpeed={50}
-            text={["Software Engineer 🧑🏽‍💻 ", "Gamer 🎮", "Self Taught 🤓"]}
+            text={["Software Engineer.", "Gamer.", "Self Taught."]}
           />
         )}
       </Heading>
@@ -54,7 +54,7 @@ export function Introduction() {
             cursor=" "
             typingDelay={2000}
             eraseDelay={10000 * 10000}
-            speed={50}
+            speed={75}
             text={["Criando experiências únicas através do código"]}
           />
         )}
