@@ -6,6 +6,7 @@ import {
   ModalFooter,
   ModalBody,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import { useAppSelector } from "@redux/hooks";
 import {
@@ -56,7 +57,9 @@ export function GamificationModalRoot() {
             colorScheme="yellow"
             mr={3}
           >
-            Continuar navegação
+            <Text fontWeight="bold" fontFamily="Heebo">
+              Continuar navegação
+            </Text>
           </Button>
         </ModalFooter>
       </ModalContent>
