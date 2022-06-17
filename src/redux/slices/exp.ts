@@ -20,7 +20,7 @@ export const expSlice = createSlice({
       state.level = state.level + 1;
     },
     increaseExp: (state) => {
-      if (state.exp === 100) {
+      if (state.exp >= 100) {
         state.level = state.level + 1;
         state.levelIncreased = true;
         state.exp = 0;
