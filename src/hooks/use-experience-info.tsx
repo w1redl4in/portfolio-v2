@@ -15,11 +15,19 @@ export function useExperienceInfo() {
     [level]
   );
 
+  const isUserAtThisLevelOrGreater = useCallback(
+    (userLevel: number) => {
+      return level >= userLevel;
+    },
+    [level]
+  );
+
   return {
     isUserAtMaxLevel,
     exp,
     levelIncreased,
     level,
     isUserAtThisLevel,
+    isUserAtThisLevelOrGreater,
   };
 }
