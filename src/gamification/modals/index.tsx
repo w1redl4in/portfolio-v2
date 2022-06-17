@@ -14,7 +14,10 @@ import {
   GamificationModalMap,
   selectGamificationModal,
 } from "@redux/slices/gamification-modal";
-import { showIntroduction } from "@redux/slices/portfolio-behavior";
+import {
+  showHeaderAnimation,
+  showIntroduction,
+} from "@redux/slices/portfolio-behavior";
 import { useCallback, useMemo } from "react";
 import { useDispatch } from "react-redux";
 
@@ -28,6 +31,7 @@ export function GamificationModalRoot() {
   const handleCloseGamificationModal = useCallback(() => {
     dispatch(closeGamificationModal());
     dispatch(showIntroduction());
+    dispatch(showHeaderAnimation());
   }, [dispatch]);
 
   const Component = useMemo(
