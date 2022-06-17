@@ -13,7 +13,7 @@ export function Lottie({
   animationData,
   width,
   height,
-  isClickToPauseDisabled,
+  isClickToPauseDisabled = true,
   loop,
   speed,
 }: LottieProps) {
