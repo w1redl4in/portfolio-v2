@@ -41,6 +41,7 @@ export function GamificationModalRoot() {
       isOpen={isGamificationModalOpen}
       onClose={() => {}}
       preserveScrollBarGap
+      scrollBehavior="inside"
     >
       <ModalOverlay />
       <ModalContent background="modalBackground">
