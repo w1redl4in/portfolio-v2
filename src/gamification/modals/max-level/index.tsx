@@ -68,7 +68,7 @@ export function GamificationModalMaxLevel() {
                 Level Máximo
               </FancyText>
             </Heading>
-            <Text fontWeight="medium" color="white">
+            <Text fontFamily="Bungee" fontWeight="medium" color="white">
               Você alcançou o level máximo atual!
             </Text>
 
