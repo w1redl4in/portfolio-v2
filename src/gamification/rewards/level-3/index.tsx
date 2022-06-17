@@ -93,6 +93,7 @@ export function Level_3Reward() {
           </MenuButton>
           <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
             <MenuItem
+              background="background"
               icon={
                 <Icon
                   alignSelf="center"
