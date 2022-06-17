@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@redux/store";
 import { Fonts } from "@components/Fonts";
 import { theme } from "@styles/theme";
+import { GamificationModalMaxLevel } from "@gamification/modals/max-level";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Fonts />
         <Component {...pageProps} />
+        <GamificationModalMaxLevel />
         <GamificationModalRoot />
       </Provider>
     </ChakraProvider>
