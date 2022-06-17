@@ -1,3 +1,4 @@
+import { MAX_LEVEL } from "@constants/exp";
 import { GamificationIntroductionModal } from "@gamification/modals/introduction";
 import { GamificationModalLevel2 } from "@gamification/modals/level-2";
 import { GamificationModalMaxLevel } from "@gamification/modals/max-level";
@@ -30,6 +31,7 @@ GamificationModalMap.set(
 
 const initialState = {
   isGamificationModalOpen: true,
+  isMaxLevelGamificationModalOpen: false,
   component: GamificationModalEnum.INTRODUCTION,
 };
 
@@ -45,6 +47,15 @@ export const gamificationModalSlice = createSlice({
     closeGamificationModal: (state) => {
       state.isGamificationModalOpen = false;
       state.component = GamificationModalEnum.INTRODUCTION;
+    },
+    openMaxLevelGamificationModal: (state, action: PayloadAction<number>) => {
+      const level = action.payload;
+      if (!state.isGamificationModalOpen) {
+        if (level === MAX_LEVEL) state.isMaxLevelGamificationModalOpen = true;
+      }
+    },
+    closeMaxLevelGamificationModal: (state) => {
+      state.isMaxLevelGamificationModalOpen = false;
     },
   },
 });
