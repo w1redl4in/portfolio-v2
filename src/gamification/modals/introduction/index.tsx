@@ -1,7 +1,24 @@
 import { Text, Stack, Flex } from "@chakra-ui/react";
+import { Lottie } from "@components/Lottie";
+import { useResponsive } from "@hooks/use-responsive";
+import Attention from "@lotties/attention.json";
+import { useMemo } from "react";
 export function GamificationIntroductionModal() {
+  const { isMobile } = useResponsive();
+
+  const lottieWidthAndHeight = useMemo(() => {
+    if (isMobile) return 75;
+    return 100;
+  }, [isMobile]);
+
   return (
     <Stack textAlign="center">
+      <Lottie
+        animationData={Attention}
+        width={lottieWidthAndHeight}
+        height={lottieWidthAndHeight}
+        loop
+      />
       <Text color="white" fontFamily="Heebo">
         Este site utiliza a estratégia de gamificação. 🎮
       </Text>
