@@ -11,10 +11,12 @@ import { useEffect, useMemo } from "react";
 import { useAppSelector } from "@redux/hooks";
 import { motion, useAnimation } from "framer-motion";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
+import { Level_3Reward } from "@gamification/rewards/level-3";
 
 export function Header() {
   const control = useAnimation();
-  const { isUserAtMaxLevel, exp, level } = useExperienceInfo();
+  const { isUserAtMaxLevel, exp, level, isUserAtThisLevelOrGreater } =
+    useExperienceInfo();
   const { showHeaderAnimation } = useAppSelector(selectPortfolioBehavior);
 
   const { isMobile } = useResponsive();
@@ -47,9 +49,9 @@ export function Header() {
     },
   };
 
-  const leftLottieVariant = {
+  const rightLottieVariant = {
     hidden: {
-      x: "-100vw",
+      x: "100vw",
       rotate: 360,
     },
     visible: {
@@ -61,9 +63,9 @@ export function Header() {
     },
   };
 
-  const rightLottieVariant = {
+  const leftLottieVariant = {
     hidden: {
-      x: "100vw",
+      x: "-100vw",
       rotate: 360,
     },
     visible: {
@@ -165,13 +167,18 @@ export function Header() {
         </Text>
       </Flex>
 
-      <Flex as={motion.div} variants={rightLottieVariant} mx="2rem">
-        <Lottie
-          animationData={Logo2}
-          width={lottieWidthAndHeight}
-          height={lottieWidthAndHeight}
-        />
-      </Flex>
+      {isUserAtThisLevelOrGreater(3) ? (
+        <Level_3Reward />
+      ) : (
+        <Flex as={motion.div} variants={rightLottieVariant} mx="2rem">
+          <Lottie
+            animationData={Logo2}
+            width={lottieWidthAndHeight}
+            height={lottieWidthAndHeight}
+          />
+        </Flex>
+      )}
+
       {/* <Navigation /> */}
       {/* {!isTablet && <Notifications />} */}
     </Flex>
