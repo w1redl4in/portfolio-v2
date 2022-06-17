@@ -139,7 +139,7 @@ export function Career() {
             borderRadius="10px"
             maxW="400px"
             w="100%"
-            src="hub-fintech.png"
+            src="images/hub-fintech.png"
             alt="hub fintech empresa"
           />
         </Flex>
@@ -160,7 +160,7 @@ export function Career() {
             borderRadius="10px"
             maxW="400px"
             w="100%"
-            src="meli.png"
+            src="images/meli.png"
             as={motion.img}
             variants={imageAnimations}
             initial="hidden"

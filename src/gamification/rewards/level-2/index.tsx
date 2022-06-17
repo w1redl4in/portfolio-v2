@@ -209,7 +209,7 @@ export function Level_2Reward() {
             whileTap="tap"
             variants={imageVariants}
             animate="visible"
-            src={a.iconName}
+            src={`images/${a.iconName}`}
             alt={a.iconName}
           />
         </span>
