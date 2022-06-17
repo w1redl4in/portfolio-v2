@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "@redux/store";
 
+const ExpMultiplicatorByLevel = new Map();
+ExpMultiplicatorByLevel.set(1, 2);
+ExpMultiplicatorByLevel.set(2, 3);
+
 const initialState = {
   level: 1,
   levelIncreased: false,
   exp: 0,
-  ExpMultiplicator: 1,
+  ExpMultiplicator: ExpMultiplicatorByLevel.get(1),
 };
-
-const ExpMultiplicatorByLevel = new Map();
-ExpMultiplicatorByLevel.set(1, 1);
-ExpMultiplicatorByLevel.set(2, 2);
 
 export const expSlice = createSlice({
   name: "exp",
