@@ -11,7 +11,7 @@ interface DefaultLayoutProps {
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   useCountExperience();
-  const { isUserAtThisLevel } = useExperienceInfo();
+  const { isUserAtThisLevelOrGreater } = useExperienceInfo();
 
   return (
     <Flex
@@ -23,7 +23,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
     >
       <Header />
 
-      {isUserAtThisLevel(2) && <Level_2Reward />}
+      {isUserAtThisLevelOrGreater(2) && <Level_2Reward />}
 
       {children}
       {/* <Footer /> */}
