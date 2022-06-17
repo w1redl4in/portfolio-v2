@@ -30,14 +30,14 @@ export function GamificationModalLevel2() {
           Level Up!
         </FancyText>
       </Heading>
-      <Text fontFamily="Bungee" color="white">
+      <Text fontWeight="medium" fontFamily="Bungee" color="white">
         Você alcançou o nível 2!
       </Text>
-      <Text fontFamily="Heebo" color="white">
+      <Text fontWeight="medium" fontFamily="Heebo" color="white">
         Agora conseguirá ver as tecnologias que mais gosto <br />
         flutuando pelo site.
       </Text>
-      <Text fontFamily="Heebo" color="white">
+      <Text fontWeight="medium" fontFamily="Heebo" color="white">
         Divirta-se!
       </Text>
     </Stack>
