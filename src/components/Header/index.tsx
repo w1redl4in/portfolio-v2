@@ -1,6 +1,8 @@
 import { Flex, Text, Progress } from "@chakra-ui/react";
 // import { Navigation } from "@components/Navigation";
 import { useExperienceInfo } from "@hooks/use-experience-info";
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
 
 export function Header() {
   const { isUserAtMaxLevel, exp, level } = useExperienceInfo();
@@ -47,7 +49,7 @@ export function Header() {
         >
           LEVEL {level}
         </Text>
-        <Progress
+        {/* <Progress
           size="xs"
           my={1}
           borderRadius="20px"
@@ -57,6 +59,11 @@ export function Header() {
           hasStripe
           isAnimated
           value={isUserAtMaxLevel ? 100 : exp}
+        /> */}
+        <ProgressBar
+          height={5}
+          filledBackground="linear-gradient(to right,#FFE259, #FFA751)"
+          percent={isUserAtMaxLevel ? 100 : exp}
         />
         <Text
           fontFamily="Bungee"
