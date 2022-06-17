@@ -6,23 +6,27 @@ interface LottieProps {
   width?: number;
   height?: number;
   isClickToPauseDisabled?: boolean;
+  loop?: boolean;
+  speed?: number;
 }
 export function Lottie({
   animationData,
   width,
   height,
   isClickToPauseDisabled,
+  loop,
+  speed,
 }: LottieProps) {
   const defaultOptions = useMemo(() => {
     return {
-      loop: true,
+      loop,
       autoplay: true,
       animationData: animationData,
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice",
       },
     };
-  }, [animationData]);
+  }, [animationData, loop]);
 
   return (
     <ReactLottie
@@ -30,6 +34,7 @@ export function Lottie({
       width={width}
       height={height}
       isClickToPauseDisabled={isClickToPauseDisabled}
+      speed={speed}
     />
   );
 }
