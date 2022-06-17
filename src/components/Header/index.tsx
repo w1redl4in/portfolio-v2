@@ -3,19 +3,99 @@ import { Flex, Text, Progress } from "@chakra-ui/react";
 import { useExperienceInfo } from "@hooks/use-experience-info";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
+import { Lottie } from "@components/Lottie";
+import Logo from "@lotties/logo.json";
+import Logo2 from "@lotties/logo2.json";
+import { useResponsive } from "@hooks/use-responsive";
+import { useEffect, useMemo } from "react";
+import { useAppSelector } from "@redux/hooks";
+import { motion, useAnimation } from "framer-motion";
+import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
 
 export function Header() {
+  const control = useAnimation();
   const { isUserAtMaxLevel, exp, level } = useExperienceInfo();
+  const { showHeaderAnimation } = useAppSelector(selectPortfolioBehavior);
+
+  const { isMobile } = useResponsive();
+
+  const lottieWidthAndHeight = useMemo(() => {
+    if (isMobile) return 90;
+    return 130;
+  }, [isMobile]);
+
+  const headerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+    },
+  };
+
+  const progressBarVariant = {
+    hidden: {
+      opacity: 0,
+      y: "-50vw",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const leftLottieVariant = {
+    hidden: {
+      x: "-100vw",
+      rotate: 360,
+    },
+    visible: {
+      x: 0,
+      rotate: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const rightLottieVariant = {
+    hidden: {
+      x: "100vw",
+      rotate: 360,
+    },
+    visible: {
+      x: 0,
+      rotate: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (showHeaderAnimation) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, showHeaderAnimation]);
 
   return (
     <Flex
+      as={motion.div}
+      initial="hidden"
+      animate={control}
+      variants={headerVariants}
       zIndex={999}
       w="100%"
       position="fixed"
       top={0}
       alignItems="center"
       p={6}
-      justifyContent="space-between"
+      justifyContent="space-around"
       backdropFilter="blur(8px)"
     >
       {/* {!isHD && (
@@ -31,8 +111,17 @@ export function Header() {
           felipe@austríaco
         </Text>
       )} */}
+      <Flex mx="2rem" as={motion.div} variants={leftLottieVariant}>
+        <Lottie
+          animationData={Logo}
+          width={lottieWidthAndHeight}
+          height={lottieWidthAndHeight}
+        />
+      </Flex>
 
       <Flex
+        as={motion.div}
+        variants={progressBarVariant}
         alignContent="center"
         textAlign="center"
         maxW="40rem"
@@ -74,6 +163,14 @@ export function Header() {
         >
           {isUserAtMaxLevel && "LEVEL MÁXIMO"}
         </Text>
+      </Flex>
+
+      <Flex as={motion.div} variants={rightLottieVariant} mx="2rem">
+        <Lottie
+          animationData={Logo2}
+          width={lottieWidthAndHeight}
+          height={lottieWidthAndHeight}
+        />
       </Flex>
       {/* <Navigation /> */}
       {/* {!isTablet && <Notifications />} */}
