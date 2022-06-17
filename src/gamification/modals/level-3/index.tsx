@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text, Image, Center } from "@chakra-ui/react";
 import { Lottie } from "@components/Lottie";
 import LevelUp from "@lotties/level-up.json";
 import FancyText from "@carefully-coded/react-text-gradient";
@@ -33,12 +33,23 @@ export function GamificationModalLevel3() {
       <Text fontWeight="medium" fontFamily="Bungee" color="white">
         Você alcançou o nível 3!
       </Text>
+      <Center>
+        <Image
+          borderRadius="lg"
+          boxShadow="dark-lg"
+          maxW="10rem"
+          w="100%"
+          height="auto"
+          src="images/level-3-help.PNG"
+          alt="foguete clicado mostrando o menu"
+        />
+      </Center>
       <Text fontWeight="medium" fontFamily="Heebo" color="white">
-        Agora conseguirá ver novos ícones no cabeçalho que te levará para novas
-        informações!
+        Agora clicando no foguete posicionado no cabeçalho à direita, conseguirá
+        ver um menu que libera novas áreas!
       </Text>
       <Text fontWeight="medium" fontFamily="Heebo" color="white">
-        Divirta-se!
+        Por essa você não esperava, né?
       </Text>
     </Stack>
   );
