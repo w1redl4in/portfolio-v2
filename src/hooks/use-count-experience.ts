@@ -2,6 +2,7 @@ import { useAppSelector } from "@redux/hooks";
 import { increaseExp, selectExp } from "@redux/slices/exp";
 import {
   openGamificationModal,
+  openMaxLevelGamificationModal,
   selectGamificationModal,
 } from "@redux/slices/gamification-modal";
 import { useEffect } from "react";
@@ -30,4 +31,10 @@ export function useCountExperience() {
       dispatch(openGamificationModal(level));
     }
   }, [dispatch, level, levelIncreased]);
+
+  useEffect(() => {
+    if (level === MAX_LEVEL) {
+      dispatch(openMaxLevelGamificationModal());
+    }
+  }, [dispatch, isGamificationModalOpen, level]);
 }
