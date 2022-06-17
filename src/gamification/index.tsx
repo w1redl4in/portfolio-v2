@@ -43,7 +43,7 @@ export function GamificationModalRoot() {
       preserveScrollBarGap
     >
       <ModalOverlay />
-      <ModalContent background="background">
+      <ModalContent background="modalBackground">
         <ModalHeader textAlign="center" />
         <ModalBody>
           <Component />
