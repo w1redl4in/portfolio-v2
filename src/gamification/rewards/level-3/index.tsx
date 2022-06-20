@@ -72,7 +72,7 @@ export function Level_3Reward() {
   }, [control, isMenuOpen]);
 
   return (
-    <Menu variant="outline" colorScheme="blackAlpha">
+    <Menu>
       {({ isOpen }) => (
         <>
           {setOpen(isOpen)}
@@ -91,7 +91,7 @@ export function Level_3Reward() {
               />
             </Flex>
           </MenuButton>
-          <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
+          <MenuList ml="1rem" minW={menuWidth}>
             <MenuItem
               // _hover={{
               //   _focus: {
