@@ -94,14 +94,16 @@ export function Level_3Reward() {
           <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
             <MenuItem
               _hover={{
-                background: "modalBackground",
+                _focus: {
+                  background: "whiteAlpha.100",
+                },
               }}
               icon={
                 <Icon
                   alignSelf="center"
                   as={MdOutlineWork}
-                  w={6}
-                  h={6}
+                  w={5}
+                  h={5}
                   color="brand"
                 />
               }
