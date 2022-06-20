@@ -72,7 +72,7 @@ export function Level_3Reward() {
   }, [control, isMenuOpen]);
 
   return (
-    <Menu variant="outline">
+    <Menu variant="outline" colorScheme="blackAlpha">
       {({ isOpen }) => (
         <>
           {setOpen(isOpen)}
@@ -93,11 +93,11 @@ export function Level_3Reward() {
           </MenuButton>
           <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
             <MenuItem
-              _hover={{
-                _focus: {
-                  background: "whiteAlpha.100",
-                },
-              }}
+              // _hover={{
+              //   _focus: {
+              //     background: "whiteAlpha.100",
+              //   },
+              // }}
               icon={
                 <Icon
                   alignSelf="center"
