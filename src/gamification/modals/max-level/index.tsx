@@ -89,9 +89,7 @@ export function GamificationModalMaxLevel() {
             colorScheme="yellow"
             mr={3}
           >
-            <Text fontWeight="bold" fontFamily="Heebo">
-              Continuar navegação
-            </Text>
+            <Text fontFamily="Heebo">Continuar navegação</Text>
           </Button>
         </ModalFooter>
       </ModalContent>
