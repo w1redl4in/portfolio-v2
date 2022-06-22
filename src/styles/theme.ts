@@ -7,4 +7,11 @@ export const theme = extendTheme({
     brand: "#FFD858",
     textSecondary: "#8F9BA8",
   },
+  styles: {
+    global: {
+      body: {
+        bg: "background",
+      },
+    },
+  },
 });
