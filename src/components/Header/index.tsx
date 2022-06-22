@@ -12,6 +12,7 @@ import { useAppSelector } from "@redux/hooks";
 import { motion, useAnimation } from "framer-motion";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
 import { Level_3Reward } from "@gamification/rewards/level-3";
+import Link from "next/link";
 
 export function Header() {
   const control = useAnimation();
@@ -100,26 +101,15 @@ export function Header() {
       justifyContent="space-around"
       backdropFilter="blur(8px)"
     >
-      {/* {!isHD && (
-        <Text
-          cursor="pointer"
-          fontFamily="Indie Flower"
-          minWidth="20%"
-          fontSize="4xl"
-          fontWeight="black"
-          bgGradient="linear(to-r, #F953C6, #B91D73)"
-          bgClip="text"
-        >
-          felipe@austríaco
-        </Text>
-      )} */}
-      <Flex mx="2rem" as={motion.div} variants={leftLottieVariant}>
-        <Lottie
-          animationData={Logo}
-          width={lottieWidthAndHeight}
-          height={lottieWidthAndHeight}
-        />
-      </Flex>
+      <Link href="/">
+        <Flex mx="2rem" as={motion.div} variants={leftLottieVariant}>
+          <Lottie
+            animationData={Logo}
+            width={lottieWidthAndHeight}
+            height={lottieWidthAndHeight}
+          />
+        </Flex>
+      </Link>
 
       <Flex
         as={motion.div}
