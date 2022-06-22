@@ -15,6 +15,7 @@ import { Lottie } from "@components/Lottie";
 import { useAppSelector } from "@redux/hooks";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
 import { MdOutlineWork } from "@icons";
+import Link from "next/link";
 
 export function Level_3Reward() {
   const [isMenuOpen, setOpen] = useState<boolean>();
@@ -92,22 +93,24 @@ export function Level_3Reward() {
             </Flex>
           </MenuButton>
           <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
-            <MenuItem
-              _hover={{
-                background: "modalBackground",
-              }}
-              icon={
-                <Icon
-                  alignSelf="center"
-                  as={MdOutlineWork}
-                  w={6}
-                  h={6}
-                  color="brand"
-                />
-              }
-            >
-              <Text>Projetos</Text>
-            </MenuItem>
+            <Link href="/projects">
+              <MenuItem
+                _hover={{
+                  background: "modalBackground",
+                }}
+                icon={
+                  <Icon
+                    alignSelf="center"
+                    as={MdOutlineWork}
+                    w={6}
+                    h={6}
+                    color="brand"
+                  />
+                }
+              >
+                <Text>Projetos</Text>
+              </MenuItem>
+            </Link>
           </MenuList>
         </>
       )}
