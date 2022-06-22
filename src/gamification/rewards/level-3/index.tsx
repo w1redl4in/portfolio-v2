@@ -73,7 +73,7 @@ export function Level_3Reward() {
   }, [control, isMenuOpen]);
 
   return (
-    <Menu variant="outline">
+    <Menu colorScheme="blackAlpha">
       {({ isOpen }) => (
         <>
           {setOpen(isOpen)}
