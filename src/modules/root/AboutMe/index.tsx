@@ -39,7 +39,7 @@ export function AboutMe() {
   const maxWidthImage = useMemo(() => {
     if (isTablet) return "250px";
     if (isMobile) return "200px";
-    return "400px";
+    return "280px";
   }, [isMobile, isTablet]);
 
   useEffect(() => {
