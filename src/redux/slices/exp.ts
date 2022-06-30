@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "@redux/store";
 
 const ExpMultiplicatorByLevel = new Map();
-ExpMultiplicatorByLevel.set(1, 2);
-ExpMultiplicatorByLevel.set(2, 3);
+ExpMultiplicatorByLevel.set(1, 1);
+ExpMultiplicatorByLevel.set(2, 0.8);
 
 const initialState = {
   level: 1,
