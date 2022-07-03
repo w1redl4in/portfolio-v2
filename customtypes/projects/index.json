@@ -5,13 +5,6 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Uid",
-          "placeholder": ""
-        }
-      },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -38,11 +31,46 @@
           "thumbnails": []
         }
       },
-      "date": {
-        "type": "Date",
+      "wip": {
+        "type": "Boolean",
         "config": {
-          "label": "Date",
-          "placeholder": ""
+          "label": "Wip",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "fields": {
+            "github": {
+              "type": "Link",
+              "config": {
+                "label": "Github",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "demo": {
+              "type": "Link",
+              "config": {
+                "label": "Demo",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "techs": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Techs",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       }
     }

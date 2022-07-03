@@ -1,19 +1,19 @@
 {
-  "id": "ce94ec9e-8bc5-4173-9f02-ccbef9c81aaa",
-  "uid": "id-optio-quasi",
+  "id": "611c8847-d2a0-4fb2-b028-d251983316ee",
+  "uid": "unde-neque-voluptates",
   "type": "projects",
   "data": {
     "title": [
       {
         "type": "paragraph",
-        "text": "Commodo non aliqua proident nulla ipsum labore.",
+        "text": "Cupidatat nostrud incididunt laborum officia anim dolore sit ut adipisicing dolore culpa cillum. Consequat amet pariatur aute excepteur est ad amet eu. Sint et dolor nisi minim quis culpa adipisicing cillum.",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Nostrud incididunt aliqua aliqua et.",
+        "text": "Reprehenderit do culpa pariatur nostrud et laboris non enim adipisicing sint laborum sint aliquip. Eu cillum in proident laboris aute consequat quis anim cillum.",
         "spans": []
       }
     ],
@@ -24,8 +24,57 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
     },
-    "date": "2019-11-17"
+    "wip": false,
+    "techs": [
+      {
+        "type": "paragraph",
+        "text": "Quis amet nulla mollit ipsum sunt et. Elit minim minim minim laborum excepteur reprehenderit excepteur ullamco. Ipsum nulla et id voluptate fugiat magna amet consectetur voluptate Lorem est ad ullamco fugiat aliquip.",
+        "spans": []
+      }
+    ],
+    "links": [
+      {
+        "github": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "demo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "github": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "demo": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "github": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "demo": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "github": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "demo": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ]
   }
 }
