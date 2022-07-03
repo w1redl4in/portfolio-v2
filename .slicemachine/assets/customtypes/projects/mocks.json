@@ -1,0 +1,31 @@
+{
+  "id": "ce94ec9e-8bc5-4173-9f02-ccbef9c81aaa",
+  "uid": "id-optio-quasi",
+  "type": "projects",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Commodo non aliqua proident nulla ipsum labore.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Nostrud incididunt aliqua aliqua et.",
+        "spans": []
+      }
+    ],
+    "projectImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+    },
+    "date": "2019-11-17"
+  }
+}
