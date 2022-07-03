@@ -119,6 +119,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
               maxW="lg"
               borderWidth="1px"
               borderRadius="lg"
+              borderColor="chakra-border-color"
               overflow="hidden"
             >
               <Image src={project.image} alt="project" />
