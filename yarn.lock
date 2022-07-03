@@ -2009,6 +2009,11 @@
     "@prismicio/helpers" "^2.3.1"
     "@prismicio/types" "^0.1.29"
 
+"@prismicio/helpers@^1.0.4":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-1.2.0.tgz#7e6c8a2ca469af3c3ff1997b4d8d4eb88ee86cdf"
+  integrity sha512-YsOfGgauGeTC5Co8zXvz278Lc/V3fyNaAPTs/y4gGrLmLhYa/eT7+USYvDB9RhKEPhYFnUqBiGWa+3l7BksYOQ==
+
 "@prismicio/helpers@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-2.3.1.tgz#e6d36a95ca9b0c1340322e6ae1830fc072f02742"
@@ -2026,6 +2031,11 @@
   dependencies:
     "@prismicio/helpers" "^2.3.1"
     "@prismicio/richtext" "^2.0.1"
+
+"@prismicio/richtext@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/richtext/-/richtext-1.1.0.tgz#c8769c3d953ae42854a2aba951e3b2121682b8c7"
+  integrity sha512-925JuFiZiIkwu9jmlR9O/U8xCSZk/Y6BQDXKpavoVsKo+n90ml1hGdtWkglIupX+ITQO1ZINyDgUgiY1oG9dsA==
 
 "@prismicio/richtext@^2.0.1":
   version "2.1.0"
@@ -2389,6 +2399,11 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@types/prismic-dom@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/prismic-dom/-/prismic-dom-2.1.1.tgz#964f4699a3068721627674d12a0689e457e9065c"
+  integrity sha512-gZSFBARo4vFnpclOq2DzU9t4wikVsZ0+lL4hXaRoeUJinhGSK+nMERcZJgXglK/+QRcw3HBPbGJzgzTqQGSuNw==
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -3792,7 +3807,7 @@ escalade@^3.1.1:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
-escape-html@^1.0.3, escape-html@~1.0.3:
+escape-html@1.0.3, escape-html@^1.0.3, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==
@@ -6200,6 +6215,15 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prismic-dom@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.2.7.tgz#a4d36cc4fc92b84f8b46e5a515513c07b5f2f43e"
+  integrity sha512-4rJWzBqq/6h15giAzB6L8+eaWLQJrQcM4EAicmtw3mI8DhussbJOgheTeFtTCgvO7e5QEjZA0he5gEbQYfKGmg==
+  dependencies:
+    "@prismicio/helpers" "^1.0.4"
+    "@prismicio/richtext" "^1.1.0"
+    escape-html "1.0.3"
 
 probe-image-size@^7.2.2:
   version "7.2.3"
