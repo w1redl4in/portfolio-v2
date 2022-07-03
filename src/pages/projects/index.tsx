@@ -99,6 +99,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
         initial="hidden"
         animate="visible"
         marginTop="15rem"
+        zIndex={999}
       >
         <Center>
           <Heading color="white">Projetos</Heading>
@@ -123,8 +124,10 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
               <Image src={project.image} alt="project" />
               <Box p="6" display="flex" alignItems="space-between">
                 <Stack>
-                  <Heading>{project.title}</Heading>
-                  <Text fontWeight="light">{project.description}</Text>
+                  <Heading color="white">{project.title}</Heading>
+                  <Text color="textSecondary" fontWeight="normal">
+                    {project.description}
+                  </Text>
                   <Flex alignItems="center" justifyContent="space-between">
                     {returnBadgeAccordingToWip(project.wip)}
                     <HStack>
