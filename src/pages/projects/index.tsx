@@ -80,7 +80,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
     if (wip)
       return (
         <Badge colorScheme="green" p={1}>
-          Working On
+          Currently Working On
         </Badge>
       );
 
@@ -104,7 +104,13 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
           <Heading color="white">Projetos</Heading>
         </Center>
         <br />
-        <Flex maxW="105rem" m="0 auto" flexWrap="wrap">
+        <Flex
+          maxW="105rem"
+          w="100%"
+          m="0 auto"
+          flexWrap="wrap"
+          justify="center"
+        >
           {projects.map((project) => (
             <Box
               m={5}
