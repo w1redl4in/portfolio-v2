@@ -47,8 +47,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.4,
-        staggerChildren: 0.05,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -56,14 +55,11 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
   const projectVariants = {
     hidden: {
       opacity: 0,
-      y: "-50vh",
+      x: "-50vw",
     },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-      },
+      x: 0,
     },
   };
 
@@ -99,7 +95,6 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
         initial="hidden"
         animate="visible"
         marginTop="15rem"
-        zIndex={999}
       >
         <Center>
           <Heading color="white">Projetos</Heading>
@@ -119,12 +114,14 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
               maxW="lg"
               borderWidth="1px"
               borderRadius="lg"
-              borderColor="chakra-border-color"
+              borderColor="whiteAlpha.300"
               overflow="hidden"
+              as={motion.div}
+              variants={projectVariants}
             >
               <Image src={project.image} alt="project" />
               <Box p="6" display="flex" alignItems="space-between">
-                <Stack>
+                <Stack w="100%">
                   <Heading color="white">{project.title}</Heading>
                   <Text color="textSecondary" fontWeight="normal">
                     {project.description}
