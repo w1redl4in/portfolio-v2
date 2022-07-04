@@ -98,6 +98,9 @@ export function Level_3Reward() {
                 _hover={{
                   background: "modalBackground",
                 }}
+                _focus={{
+                  background: "whiteAlpha.100",
+                }}
                 icon={
                   <Icon
                     alignSelf="center"
