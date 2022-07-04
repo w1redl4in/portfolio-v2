@@ -111,7 +111,7 @@ export function Level_3Reward() {
                   />
                 }
               >
-                <Text>Projetos</Text>
+                <Text color="white">Projetos</Text>
               </MenuItem>
             </Link>
           </MenuList>
