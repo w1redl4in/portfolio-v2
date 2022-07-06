@@ -12,6 +12,19 @@ export const theme = extendTheme({
       body: {
         bg: "background",
       },
+      "::-webkit-scrollbar": {
+        width: "4px",
+        background: "background",
+      },
+      "::-webkit-scrollbar-track": {
+        background: "background",
+        width: "1rem",
+      },
+      "::-webkit-scrollbar-thumb": {
+        width: "5px",
+        background: "brand",
+        borderRadius: "0.5rem",
+      },
     },
   },
 });
