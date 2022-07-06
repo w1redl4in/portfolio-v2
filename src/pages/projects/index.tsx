@@ -126,7 +126,11 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
                   <Text color="textSecondary" fontWeight="normal">
                     {project.description}
                   </Text>
-                  <Flex alignItems="center" justifyContent="space-between">
+                  <Flex
+                    alignItems="center"
+                    justifyContent="space-between"
+                    flexWrap="wrap"
+                  >
                     {returnBadgeAccordingToWip(project.wip)}
                     <HStack>
                       {Object.values(project.links).map(
@@ -157,7 +161,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
                       )}
                     </HStack>
                   </Flex>
-                  <HStack>
+                  <HStack flexWrap="wrap">
                     {project.techs.map((tech) => (
                       <Tooltip key={tech} label={tech}>
                         <Image w={25} src={`/images/${tech}.svg`} alt={tech} />
