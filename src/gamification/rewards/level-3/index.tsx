@@ -6,10 +6,12 @@ import {
   MenuItem,
   Text,
   Icon,
+  Box,
+  Badge,
 } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import Logo2 from "@lotties/logo2.json";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useResponsive } from "@hooks/use-responsive";
 import { Lottie } from "@components/Lottie";
 import { useAppSelector } from "@redux/hooks";
@@ -23,6 +25,10 @@ export function Level_3Reward() {
   const { showHeaderAnimation } = useAppSelector(selectPortfolioBehavior);
   const { isMobile } = useResponsive();
   const control = useAnimation();
+
+  const returnLabelBasedOnMenu = useCallback(() => {
+    return isMenuOpen ? "Obrigado! 😜" : "Clica em mim! 🥺";
+  }, [isMenuOpen]);
 
   const rightLottieVariant = {
     hidden: {
@@ -79,12 +85,18 @@ export function Level_3Reward() {
           {setOpen(isOpen)}
           <MenuButton>
             <Flex
+              position="relative"
               initial="hidden"
               animate={control}
               variants={rightLottieVariant}
               as={motion.div}
               mx="2rem"
             >
+              <Box left="0" right="0.6rem" position="absolute">
+                <Badge px="1rem">
+                  <Text>{returnLabelBasedOnMenu()}</Text>
+                </Badge>
+              </Box>
               <Lottie
                 animationData={Logo2}
                 width={lottieWidthAndHeight}
