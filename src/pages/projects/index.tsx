@@ -18,6 +18,7 @@ import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
 import { AiFillGithub, FaRocket } from "@icons";
 import { useCallback } from "react";
+import Head from "next/head";
 
 interface ProjectsProps {
   projects: [
@@ -89,6 +90,9 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
 
   return (
     <DefaultLayout>
+      <Head>
+        <title>Felipe Austríaco - Projetos</title>
+      </Head>
       <Box
         as={motion.div}
         variants={containerVariants}
