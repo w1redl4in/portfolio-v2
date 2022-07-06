@@ -111,7 +111,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
             <Box
               m={5}
               key={project.slug}
-              maxW="lg"
+              maxW={["lg", "sm", "sm", "sm"]}
               borderWidth="1px"
               borderRadius="lg"
               borderColor="whiteAlpha.300"
@@ -162,7 +162,6 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
                       <Tooltip key={tech} label={tech}>
                         <Image w={25} src={`/images/${tech}.svg`} alt={tech} />
                       </Tooltip>
-                      // <Text key={tech}>{tech}</Text>
                     ))}
                   </HStack>
                 </Stack>
