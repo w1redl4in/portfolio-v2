@@ -1,5 +1,105 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "articles": {
+        "library": "slices",
+        "id": "articles",
+        "name": "Articles",
+        "description": "Articles",
+        "model": {
+          "id": "articles",
+          "type": "SharedSlice",
+          "name": "Articles",
+          "description": "Articles",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Articles",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "Title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "articles",
+            "items": [
+              {
+                "Title": [
+                  {
+                    "type": "heading1",
+                    "text": "Implement bricks-and-clicks architectures",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "Title": [
+                  {
+                    "type": "heading1",
+                    "text": "Enhance 24/365 synergies",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Cultivate out-of-the-box web services",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Consequat dolor consectetur deserunt ut magna proident anim quis cillum magna consequat. Proident non ullamco reprehenderit consectetur duis cupidatat ad cupidatat ad adipisicing esse amet cupidatat.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
   }
 }

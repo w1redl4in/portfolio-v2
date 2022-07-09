@@ -1,5 +1,20 @@
 {
   "_cts": {
-    "projects": {}
+    "projects": {},
+    "articles": {}
+  },
+  "slices": {
+    "Articles": {
+      "default": {
+        "items": {
+          "Title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }
