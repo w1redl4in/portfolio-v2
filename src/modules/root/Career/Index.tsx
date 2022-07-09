@@ -103,7 +103,7 @@ export function Career() {
         >
           <Stack textAlign={["center", "center", "center", "left"]}>
             <Text fontFamily="Heebo" color="white" fontWeight="semibold">
-              Analisa de Desenvolvimento de Software
+              Analista de Desenvolvimento de Software
             </Text>
             <Flex>
               <Link target="_blank" href="https://fintechmagalu.com.br">
