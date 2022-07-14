@@ -1,12 +1,21 @@
 import { MAX_LEVEL } from "@constants/exp";
 import { useAppSelector } from "@redux/hooks";
 import { selectExp } from "@redux/slices/exp";
+import { useRouter } from "next/router";
 import { useCallback, useMemo } from "react";
 
 export function useExperienceInfo() {
+  const router = useRouter();
   const { level, exp, levelIncreased } = useAppSelector(selectExp);
 
   const isUserAtMaxLevel = useMemo(() => level === MAX_LEVEL, [level]);
+
+  console.log("router", router);
+
+  const isUserReadingAnArticle = useMemo(
+    () => router.pathname === "/articles/[slug]",
+    [router.pathname]
+  );
 
   const isUserAtThisLevel = useCallback(
     (userLevel: number) => {
@@ -29,5 +38,6 @@ export function useExperienceInfo() {
     level,
     isUserAtThisLevel,
     isUserAtThisLevelOrGreater,
+    isUserReadingAnArticle,
   };
 }
