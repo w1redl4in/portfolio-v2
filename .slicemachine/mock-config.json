@@ -6,10 +6,47 @@
   "slices": {
     "Articles": {
       "default": {
-        "items": {
-          "Title": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "Quote": {
+      "default": {
+        "primary": {
+          "quote": {
             "config": {
-              "patternType": "HEADING",
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "Text": {
+      "default": {
+        "primary": {},
+        "items": {
+          "Text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextBlock": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }

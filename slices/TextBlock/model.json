@@ -1,15 +1,15 @@
 {
-  "id": "articles",
+  "id": "text_block",
   "type": "SharedSlice",
-  "name": "Articles",
-  "description": "Articles",
+  "name": "TextBlock",
+  "description": "TextBlock",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Articles",
+      "description": "TextBlock",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -22,23 +22,14 @@
         "description": {
           "type": "StructuredText",
           "config": {
-            "single": "paragraph",
             "label": "Description",
-            "placeholder": "A nice description of your feature"
-          }
-        }
-      },
-      "items": {
-        "Title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Title",
-            "placeholder": "",
+            "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "single": "heading1"
+            "multi": "paragraph,strong,em,hyperlink,embed"
           }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

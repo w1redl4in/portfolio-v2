@@ -1,8 +1,7 @@
 {
   "_latest": "0.3.0",
   "apiEndpoint": "https://gamification-portfolio.prismic.io/api/v2",
-  "libraries": [
-    "@/slices"
-  ],
-  "framework": "previousNext"
+  "libraries": ["@/slices"],
+  "framework": "previousNext",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
