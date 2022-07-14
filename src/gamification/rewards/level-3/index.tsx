@@ -16,7 +16,7 @@ import { useResponsive } from "@hooks/use-responsive";
 import { Lottie } from "@components/Lottie";
 import { useAppSelector } from "@redux/hooks";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
-import { MdOutlineWork } from "@icons";
+import { MdOutlineWork, MdOutlineArticle } from "@icons";
 import Link from "next/link";
 
 export function Level_3Reward() {
@@ -62,6 +62,21 @@ export function Level_3Reward() {
     return "10rem";
   }, [isMobile]);
 
+  const routes = useMemo(() => {
+    return [
+      {
+        name: "Projetos",
+        icon: MdOutlineWork,
+        href: "/projects",
+      },
+      {
+        name: "Artigos",
+        icon: MdOutlineArticle,
+        href: "/articles",
+      },
+    ];
+  }, []);
+
   useEffect(() => {
     if (showHeaderAnimation) {
       control.start("visible");
@@ -105,27 +120,29 @@ export function Level_3Reward() {
             </Flex>
           </MenuButton>
           <MenuList ml="1rem" background="modalBackground" minW={menuWidth}>
-            <Link href="/projects">
-              <MenuItem
-                _hover={{
-                  background: "modalBackground",
-                }}
-                _focus={{
-                  background: "whiteAlpha.100",
-                }}
-                icon={
-                  <Icon
-                    alignSelf="center"
-                    as={MdOutlineWork}
-                    w={6}
-                    h={6}
-                    color="brand"
-                  />
-                }
-              >
-                <Text color="white">Projetos</Text>
-              </MenuItem>
-            </Link>
+            {routes.map((route) => (
+              <Link key={route.href} href={route.href}>
+                <MenuItem
+                  _hover={{
+                    background: "modalBackground",
+                  }}
+                  _focus={{
+                    background: "whiteAlpha.100",
+                  }}
+                  icon={
+                    <Icon
+                      alignSelf="center"
+                      as={route.icon}
+                      w={6}
+                      h={6}
+                      color="brand"
+                    />
+                  }
+                >
+                  <Text color="white">{route.name}</Text>
+                </MenuItem>
+              </Link>
+            ))}
           </MenuList>
         </>
       )}
