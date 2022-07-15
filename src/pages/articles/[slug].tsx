@@ -45,7 +45,7 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
         </Flex>
 
         <Box p="2rem" maxW="50rem" w="100%" margin="0 auto">
-          <Box mb="2rem">
+          <Box w="fit-content" mb="1rem">
             <NextLink href="/articles" passHref>
               <Link display="flex" color="white" alignItems="center">
                 <Icon as={AiOutlineRollback} mx="2px" w={9} h={9} />
