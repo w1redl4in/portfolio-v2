@@ -36,7 +36,7 @@ export function GamificationIntroductionModal() {
         seja, <br /> quanto maior o seu level mais experiência você ganhará! ✨
       </Text>
       <Text color="white" fontFamily="Heebo">
-        Os pontos só começarão a contabilizar <br /> após fechar este modal. ❎
+        Os pontos só contabilizam <br /> quando nenhum modal está aberto. ✅
       </Text>
       <Flex justify="center">
         🛎️
