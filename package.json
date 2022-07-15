@@ -33,6 +33,7 @@
     "react-lottie": "^1.2.3",
     "react-redux": "^8.0.2",
     "react-step-progress-bar": "^1.0.3",
+    "react-syntax-highlighter": "^15.5.0",
     "react-typing-effect": "^2.0.5"
   },
   "devDependencies": {
