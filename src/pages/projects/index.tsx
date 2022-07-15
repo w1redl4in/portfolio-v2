@@ -18,7 +18,7 @@ import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
 import { AiFillGithub, FaRocket } from "@icons";
 import { useCallback } from "react";
-import Head from "next/head";
+import { SEO } from "@components/SEO";
 
 interface ProjectsProps {
   projects: [
@@ -90,9 +90,11 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
 
   return (
     <DefaultLayout>
-      <Head>
-        <title>Felipe Austríaco - Projetos</title>
-      </Head>
+      <SEO
+        title="Felipe Austríaco - Projetos"
+        image={projects[0]?.image}
+        description="Listagem de todos os projetos que fiz"
+      />
       <Box
         as={motion.div}
         variants={containerVariants}

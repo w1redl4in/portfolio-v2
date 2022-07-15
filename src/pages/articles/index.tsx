@@ -1,16 +1,9 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Stack,
-  Image,
-  HStack,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Stack, Image, HStack } from "@chakra-ui/react";
 import { DefaultLayout } from "@layouts/default";
 import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
 import Link from "next/link";
+import { SEO } from "@components/SEO";
 
 interface ArticlesProps {
   articles: [
@@ -29,6 +22,11 @@ interface ArticlesProps {
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   return (
     <DefaultLayout>
+      <SEO
+        title="Felipe Austríaco - Artigos"
+        image={articles[0]?.thumbnail}
+        description="Listagem de todos os artigos"
+      />
       <Box marginTop="15rem">
         <Stack maxW="50rem" w="100%" margin="0 auto">
           <Heading textAlign="center" color="white">
