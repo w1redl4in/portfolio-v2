@@ -3,7 +3,7 @@ import { DynamicSliceMachine } from "@components/SliceMachine";
 import { DefaultLayout } from "@layouts/default";
 import { RichText } from "prismic-reactjs";
 import { getPrismicClient } from "services/prismic";
-import Head from "next/head";
+import { SEO } from "@components/SEO";
 
 type ArticleProps = {
   article: {
@@ -19,18 +19,11 @@ type ArticleProps = {
 const Article: React.FC<ArticleProps> = ({ article }) => {
   return (
     <DefaultLayout>
-      <Head>
-        <title>{article.title}</title>
-        <meta property="og:title" content={article.title} />
-        <meta property="og:image" content={article.thumbnail} />
-        <meta property="og:description" content={article.description} />
-        <meta
-          property="og:url"
-          content="Programação frontend, carreira, dicas"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="627" />
-      </Head>
+      <SEO
+        title={article.title}
+        image={article.thumbnail}
+        description={article.description}
+      />
       <Box w="100%" marginTop="12rem">
         <Flex justify="center">
           <Image
