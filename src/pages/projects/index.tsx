@@ -182,7 +182,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const prismic = getPrismicClient();
 
   const prismicResponse = await prismic.getAllByType("projects");
@@ -201,6 +201,7 @@ export async function getServerSideProps() {
     props: {
       projects,
     },
+    revalidate: 60 * 20, // tempo em segundos, 20 minutos
   };
 }
 
