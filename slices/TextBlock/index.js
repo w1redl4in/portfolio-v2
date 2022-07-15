@@ -6,7 +6,6 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const TextBlock = ({ slice }) => (
   <Stack as="section">
-    {console.log("slices", slice)}
     <Heading size="lg" color="brand">
       <RichText render={slice.primary.title} />
     </Heading>
