@@ -14,9 +14,10 @@
         "title": {
           "type": "StructuredText",
           "config": {
-            "single": "heading1",
             "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,heading5,heading6"
           }
         },
         "description": {
@@ -25,7 +26,25 @@
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink,embed"
+            "multi": "paragraph,strong,em,hyperlink,embed,list-item,o-list-item"
+          }
+        },
+        "Code": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Code",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "preformatted"
+          }
+        },
+        "codeLanguage": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Code Language",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

@@ -1,12 +1,12 @@
 {
-  "id": "d272af24-e1b5-47e3-a68d-f64172942e9e",
-  "uid": "aut-deleniti-quia",
+  "id": "a5e04408-4a5d-49bb-af66-5d2bfcbbb172",
+  "uid": "consequuntur-consequatur-modi",
   "type": "articles",
   "data": {
     "title": [
       {
         "type": "paragraph",
-        "text": "Ea esse cillum non dolor aliquip aliqua officia deserunt ut exercitation nostrud.",
+        "text": "Adipisicing qui dolore aliquip esse non ipsum esse ad pariatur officia. Aliqua excepteur anim mollit pariatur. Quis Lorem deserunt reprehenderit cupidatat cupidatat ipsum qui eiusmod.",
         "spans": []
       }
     ],
@@ -17,8 +17,22 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
     },
-    "date": "2012-03-12"
+    "date": "2020-05-11",
+    "ReadTimeEstimate": [
+      {
+        "type": "paragraph",
+        "text": "Id cupidatat adipisicing sunt do deserunt. Minim aute elit in ipsum laboris nisi et pariatur ex eiusmod. Esse eu mollit et ipsum.",
+        "spans": []
+      }
+    ],
+    "Description": [
+      {
+        "type": "paragraph",
+        "text": "Dolore ex proident duis sint culpa reprehenderit excepteur id.",
+        "spans": []
+      }
+    ]
   }
 }

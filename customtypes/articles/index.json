@@ -36,6 +36,24 @@
           "placeholder": ""
         }
       },
+      "ReadTimeEstimate": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Read Time Estimate",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "Description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -48,6 +66,9 @@
               "type": "SharedSlice"
             },
             "text_block": {
+              "type": "SharedSlice"
+            },
+            "code": {
               "type": "SharedSlice"
             }
           }

@@ -1,6 +1,76 @@
 {
   "slices": {
     "components": {
+      "code": {
+        "library": "slices",
+        "id": "code",
+        "name": "Code",
+        "description": "Code",
+        "model": {
+          "id": "code",
+          "type": "SharedSlice",
+          "name": "Code",
+          "description": "Code",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Code",
+              "primary": {
+                "Code": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Code",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "Colors": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Colors",
+                    "placeholder": "",
+                    "options": [
+                      "red",
+                      "black",
+                      "green",
+                      "yellow"
+                    ]
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "code",
+            "items": [],
+            "primary": {
+              "Code": [
+                {
+                  "type": "paragraph",
+                  "text": "Laboris aute pariatur veniam ullamco ipsum anim sit nostrud enim amet velit eu. Dolore duis officia voluptate laboris enim ad nulla aliqua laborum occaecat occaecat ex et. Qui voluptate ex tempor.",
+                  "spans": []
+                }
+              ],
+              "Colors": "red"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "image": {
         "library": "slices",
         "id": "image",
@@ -163,9 +233,10 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,heading4,heading5,heading6"
                   }
                 },
                 "description": {
@@ -174,7 +245,25 @@
                     "label": "Description",
                     "placeholder": "A nice description of your feature",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,strong,em,hyperlink,embed"
+                    "multi": "paragraph,strong,em,hyperlink,embed,list-item,o-list-item"
+                  }
+                },
+                "Code": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Code",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "preformatted"
+                  }
+                },
+                "codeLanguage": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Code Language",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -192,15 +281,29 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Transition e-business action-items",
+                  "type": "heading2",
+                  "text": "Enhance B2B models",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Do enim elit sint fugiat sint. Culpa proident nostrud eu.",
+                  "text": "Est nostrud ad consequat pariatur. Ipsum non qui tempor veniam non laborum aliqua anim do elit officia enim fugiat. Ea fugiat eiusmod sint nisi proident et eiusmod pariatur.",
+                  "spans": []
+                }
+              ],
+              "Code": [
+                {
+                  "type": "paragraph",
+                  "text": "Exercitation culpa proident ad sunt est consectetur anim esse. Labore Lorem consectetur cupidatat aute officia fugiat commodo sunt consectetur. Nisi consectetur veniam ipsum adipisicing dolor pariatur consectetur cupidatat elit esse ex dolore sint.",
+                  "spans": []
+                }
+              ],
+              "codeLanguage": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat anim ad occaecat mollit exercitation enim proident fugiat exercitation labore.",
                   "spans": []
                 }
               ]
@@ -211,13 +314,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/feaustriaco/Projects/Pessoal/portfolio-v2/.slicemachine/assets/slices/TextBlock/default/preview.png",
-            "width": 800,
-            "height": 75
-          }
-        }
+        "screenshotPaths": {}
       }
     }
   }
