@@ -91,6 +91,7 @@ export async function getStaticProps(context: any) {
     props: {
       article,
     },
+    revalidate: 60 * 20, // tempo em segundos, 20 minutos
   };
 }
 
