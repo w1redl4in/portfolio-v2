@@ -3,6 +3,7 @@ import { DynamicSliceMachine } from "@components/SliceMachine";
 import { DefaultLayout } from "@layouts/default";
 import { RichText } from "prismic-reactjs";
 import { getPrismicClient } from "services/prismic";
+import Head from "next/head";
 
 type ArticleProps = {
   article: {
@@ -11,12 +12,25 @@ type ArticleProps = {
     altThumbnail: string;
     date: string;
     slices: any[];
+    description: string;
   };
 };
 
 const Article: React.FC<ArticleProps> = ({ article }) => {
   return (
     <DefaultLayout>
+      <Head>
+        <title>{article.title}</title>
+        <meta property="og:title" content={article.title} />
+        <meta property="og:image" content={article.thumbnail} />
+        <meta property="og:description" content={article.description} />
+        <meta
+          property="og:url"
+          content="Programação frontend, carreira, dicas"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+      </Head>
       <Box w="100%" marginTop="12rem">
         <Flex justify="center">
           <Image
@@ -48,6 +62,7 @@ export async function getStaticProps(context: any) {
     thumbnail: prismicResponse.data.thumbnail.url,
     altThumbnail: prismicResponse.data.thumbnail.alt,
     date: prismicResponse.data.date,
+    description: RichText.asText(prismicResponse.data.Description),
     slices: prismicResponse.data.slices,
   };
 
