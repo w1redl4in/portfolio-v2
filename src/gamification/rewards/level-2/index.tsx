@@ -63,7 +63,7 @@ export function Level_2Reward() {
       {
         zIndex: 0,
         position: "absolute",
-        iconName: "favicon.ico",
+        iconName: "vercel.svg",
         width: 20,
         height: 20,
         top: "20%",
