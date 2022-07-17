@@ -38,6 +38,10 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
       <Box w="100%" marginTop="12rem">
         <Flex justify="center">
           <Image
+            w="100%"
+            height="45vh"
+            objectFit="cover"
+            objectPosition="0 60%"
             placeSelf="center"
             src={article.thumbnail}
             alt={article.altThumbnail}
@@ -61,7 +65,9 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
             </NextLink>
           </Box>
 
-          <Heading color="brand">{article.title}</Heading>
+          <Heading color="brand" mb="5rem">
+            {article.title}
+          </Heading>
           <Stack spacing="3rem">
             <DynamicSliceMachine slices={article.slices} />
           </Stack>
