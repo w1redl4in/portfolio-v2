@@ -4,6 +4,7 @@ import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
 import Link from "next/link";
 import { SEO } from "@components/SEO";
+import FancyText from "@carefully-coded/react-text-gradient";
 
 interface ArticlesProps {
   articles: [
@@ -29,8 +30,19 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
       />
       <Box marginTop="15rem">
         <Stack maxW="50rem" w="100%" margin="0 auto">
-          <Heading textAlign="center" color="white">
-            Artigos
+          <Heading
+            textAlign="center"
+            fontFamily="Bungee"
+            color="yellow.400"
+            size="lg"
+          >
+            <FancyText
+              gradient={{ from: "#FFE259", to: "#FFA751", type: "linear" }}
+              animate
+              animateDuration={500}
+            >
+              Artigos
+            </FancyText>
           </Heading>
           <Stack>
             {articles.map((article) => (

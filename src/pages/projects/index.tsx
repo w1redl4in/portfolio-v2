@@ -19,6 +19,7 @@ import { RichText } from "prismic-dom";
 import { AiFillGithub, FaRocket } from "@icons";
 import { useCallback } from "react";
 import { SEO } from "@components/SEO";
+import FancyText from "@carefully-coded/react-text-gradient";
 
 interface ProjectsProps {
   projects: [
@@ -102,9 +103,21 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
         animate="visible"
         marginTop="15rem"
       >
-        <Center>
-          <Heading color="white">Projetos</Heading>
-        </Center>
+        <Heading
+          textAlign="center"
+          fontFamily="Bungee"
+          color="yellow.400"
+          size="lg"
+        >
+          <FancyText
+            gradient={{ from: "#FFE259", to: "#FFA751", type: "linear" }}
+            animate
+            animateDuration={500}
+          >
+            Projetos
+          </FancyText>
+        </Heading>
+        c
         <br />
         <Flex
           maxW="105rem"
