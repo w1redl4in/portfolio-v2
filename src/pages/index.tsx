@@ -3,6 +3,7 @@ import { DefaultLayout } from "@layouts/default";
 import { Introduction } from "@modules/root/Introduction";
 import { AboutMe } from "@modules/root/AboutMe";
 import { Career } from "@modules/root/Career/Index";
+import { SocialMedias } from "@modules/root/SocialMedias";
 import Head from "next/head";
 
 const Home: NextPage = () => {
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <Introduction />
       <AboutMe />
       <Career />
+      <SocialMedias />
     </DefaultLayout>
   );
 };
