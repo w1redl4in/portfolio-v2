@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import { Header } from "@components/Header";
 import { Level_2Reward } from "@gamification/rewards/level-2";
 import { useExperienceInfo } from "@hooks/use-experience-info";
-import { SocialMedias } from "@modules/root/SocialMedias";
+import { SocialMedias } from "@components/SocialMedias";
 import { useCountExperience } from "hooks/use-count-experience";
 
 interface DefaultLayoutProps {
