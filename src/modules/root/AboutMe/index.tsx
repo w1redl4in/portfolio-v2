@@ -101,13 +101,13 @@ export function AboutMe() {
               </Text>
             </Flex>
             <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
-              Como você já sabe, meu nome é Felipe Austríaco, <br /> tenho 26
-              anos e sou desenvolvedor há 3 anos. 😁
+              Meu nome é Felipe Austríaco, <br /> tenho 26 anos e sou
+              desenvolvedor há 3 anos. 😁
             </Text>
 
             <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
-              Um homem com dois amores, front-end e back-end, <br /> apesar de
-              ter uma queda maior pelo front. 🥰
+              Curto tanto front-end quanto back-end, <br /> apesar de ter uma
+              queda maior pelo front. 🥰
             </Text>
 
             <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
