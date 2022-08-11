@@ -45,7 +45,13 @@ export function Introduction() {
             eraseDelay={1000}
             speed={75}
             eraseSpeed={50}
-            text={["Software Engineer.", "Gamer.", "Self Taught."]}
+            text={[
+              "Software Engineer.",
+              "Gamer.",
+              "Self Taught.",
+              "Novice Writer.",
+              "Beer Lover.",
+            ]}
           />
         )}
       </Heading>
