@@ -1,5 +1,10 @@
 import { Box, Flex, Heading, Icon, keyframes, Link } from "@chakra-ui/react";
-import { AiFillLinkedin, AiFillTwitterSquare, AiFillGithub } from "@icons";
+import {
+  AiFillLinkedin,
+  AiFillTwitterSquare,
+  AiFillGithub,
+  AiOutlineWhatsApp,
+} from "@icons";
 import { useMemo } from "react";
 
 export function SocialMedias() {
@@ -25,16 +30,8 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
-        icon: AiFillLinkedin,
-      },
-      {
-        route: "https://twitter.com/lainwired_",
-        icon: AiFillTwitterSquare,
-      },
-      {
-        route: "https://github.com/w1redl4in",
-        icon: AiFillGithub,
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -49,16 +46,8 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
-        icon: AiFillLinkedin,
-      },
-      {
-        route: "https://twitter.com/lainwired_",
-        icon: AiFillTwitterSquare,
-      },
-      {
-        route: "https://github.com/w1redl4in",
-        icon: AiFillGithub,
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -73,16 +62,8 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
-        icon: AiFillLinkedin,
-      },
-      {
-        route: "https://twitter.com/lainwired_",
-        icon: AiFillTwitterSquare,
-      },
-      {
-        route: "https://github.com/w1redl4in",
-        icon: AiFillGithub,
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -95,6 +76,90 @@ export function SocialMedias() {
       {
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
+      },
+      {
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
+      },
+      {
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
+      },
+      {
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
+      },
+      {
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
+      },
+      {
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
+      },
+      {
+        route: "https://wa.me/5511975812099",
+        icon: AiOutlineWhatsApp,
       },
     ],
     []
@@ -126,12 +191,25 @@ export function SocialMedias() {
               as={Link}
               textAlign="center"
               fontFamily="Bungee"
-              color="yellow.400"
+              color="yellow.300"
               fontSize="lg"
               href={item.route}
               target="_blank"
+              _hover={{
+                color: "brand",
+              }}
             >
-              <Icon cursor="pointer" w={41} h={41} as={item.icon} />
+              <Icon
+                cursor="pointer"
+                w={41}
+                h={41}
+                as={item.icon}
+                _hover={{
+                  transform: "scale(1.1)",
+                  transitionDuration: "0.3s",
+                  transitionTimingFunction: "ease-out",
+                }}
+              />
             </Heading>
           </Box>
         ))}
