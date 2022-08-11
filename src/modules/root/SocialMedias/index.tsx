@@ -1,10 +1,5 @@
 import { Box, Flex, Heading, Icon, keyframes, Link } from "@chakra-ui/react";
-import {
-  AiFillLinkedin,
-  AiFillInstagram,
-  AiFillTwitterSquare,
-  AiFillGithub,
-} from "@icons";
+import { AiFillLinkedin, AiFillTwitterSquare, AiFillGithub } from "@icons";
 import { useMemo } from "react";
 
 export function SocialMedias() {
@@ -18,142 +13,86 @@ export function SocialMedias() {
   const items = useMemo(
     () => [
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
       {
-        value: "LinkedIn",
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
       {
-        value: "Instagram",
-        route: "https://www.instagram.com/felipe.austriaco/",
-        icon: AiFillInstagram,
-      },
-      {
-        value: "Twitter",
         route: "https://twitter.com/lainwired_",
         icon: AiFillTwitterSquare,
       },
       {
-        value: "Github",
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
       },
@@ -175,13 +114,13 @@ export function SocialMedias() {
         display="flex"
         width="calc(250px * 14)"
       >
-        {items.map((item) => (
+        {items.map((item, index) => (
           <Box
             display="flex"
             alignItems="center"
             minW="5rem"
             margin="0 5rem"
-            key={item.value}
+            key={index}
           >
             <Heading
               as={Link}
