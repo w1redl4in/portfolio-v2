@@ -23,8 +23,8 @@ export function Header() {
   const { isMobile } = useResponsive();
 
   const lottieWidthAndHeight = useMemo(() => {
-    if (isMobile) return 90;
-    return 130;
+    if (isMobile) return 80;
+    return 90;
   }, [isMobile]);
 
   const headerVariants = {
