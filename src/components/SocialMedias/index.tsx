@@ -1,10 +1,5 @@
 import { Box, Flex, Heading, Icon, keyframes, Link } from "@chakra-ui/react";
-import {
-  AiFillLinkedin,
-  AiFillTwitterSquare,
-  AiFillGithub,
-  AiOutlineWhatsApp,
-} from "@icons";
+import { AiFillLinkedin, AiFillTwitterSquare, AiFillGithub } from "@icons";
 import { useMemo } from "react";
 
 export function SocialMedias() {
@@ -30,8 +25,16 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -46,8 +49,16 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -62,8 +73,16 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -78,8 +97,16 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -94,8 +121,16 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
+        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
+        icon: AiFillLinkedin,
+      },
+      {
+        route: "https://twitter.com/lainwired_",
+        icon: AiFillTwitterSquare,
+      },
+      {
+        route: "https://github.com/w1redl4in",
+        icon: AiFillGithub,
       },
       {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
@@ -110,10 +145,6 @@ export function SocialMedias() {
         icon: AiFillGithub,
       },
       {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
-      },
-      {
         route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
         icon: AiFillLinkedin,
       },
@@ -124,42 +155,6 @@ export function SocialMedias() {
       {
         route: "https://github.com/w1redl4in",
         icon: AiFillGithub,
-      },
-      {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
-      },
-      {
-        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
-        icon: AiFillLinkedin,
-      },
-      {
-        route: "https://twitter.com/lainwired_",
-        icon: AiFillTwitterSquare,
-      },
-      {
-        route: "https://github.com/w1redl4in",
-        icon: AiFillGithub,
-      },
-      {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
-      },
-      {
-        route: "https://www.linkedin.com/in/felipe-austriaco-dev/",
-        icon: AiFillLinkedin,
-      },
-      {
-        route: "https://twitter.com/lainwired_",
-        icon: AiFillTwitterSquare,
-      },
-      {
-        route: "https://github.com/w1redl4in",
-        icon: AiFillGithub,
-      },
-      {
-        route: "https://wa.me/5511975812099",
-        icon: AiOutlineWhatsApp,
       },
     ],
     []
