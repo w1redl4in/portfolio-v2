@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <DefaultLayout>
       <SEO
         title="Felipe Austríaco - Página Inicial"
-        image="/images/me.jpg"
+        image="/images/me3.jpeg"
         description="Meu portfólio com informações pessoais, projetos e artigos"
       />
       <Introduction />

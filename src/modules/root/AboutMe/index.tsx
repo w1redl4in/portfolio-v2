@@ -80,8 +80,8 @@ export function AboutMe() {
             maxW={maxWidthImage}
             w="100%"
             height="auto"
-            src="images/me2.jpeg"
-            borderRadius="100%"
+            src="images/me3.jpeg"
+            borderRadius="0.5rem"
             alt="me"
           />
           <Stack
