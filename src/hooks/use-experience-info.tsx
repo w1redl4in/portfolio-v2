@@ -11,7 +11,7 @@ export function useExperienceInfo() {
   const isUserAtMaxLevel = useMemo(() => level === MAX_LEVEL, [level]);
 
   const isUserReadingAnArticle = useMemo(
-    () => router.pathname === "/articles/[slug]",
+    () => router.pathname.includes("articles"),
     [router.pathname]
   );
 
