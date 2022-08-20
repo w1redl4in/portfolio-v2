@@ -10,9 +10,9 @@ interface DefaultLayoutProps {
 }
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
-  useCountExperience();
   const { isUserAtThisLevelOrGreater, isUserReadingAnArticle } =
     useExperienceInfo();
+  useCountExperience();
 
   return (
     <Flex
