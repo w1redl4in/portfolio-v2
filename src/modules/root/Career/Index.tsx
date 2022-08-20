@@ -75,8 +75,8 @@ export function Career() {
     >
       <Stack
         paddingX={10}
-        spacing={["10rem", "10rem", "10rem", "1rem"]}
-        maxW="70rem"
+        spacing={["10rem", "10rem", "10rem", "6rem"]}
+        maxW="60rem"
         w="100%"
         as={motion.div}
         ref={ref}
@@ -130,6 +130,7 @@ export function Career() {
             </Text>
           </Stack>
           <Image
+            mt={["1rem", "1rem", "1rem", 0]}
             as={motion.img}
             variants={imageAnimations}
             whileHover="whileHover"
@@ -156,6 +157,7 @@ export function Career() {
           justifyContent="space-between"
         >
           <Image
+            mt={["1rem", "1rem", "1rem", 0]}
             height="auto"
             borderRadius="10px"
             maxW="400px"
