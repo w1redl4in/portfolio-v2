@@ -16,8 +16,13 @@ import Link from "next/link";
 
 export function Header() {
   const control = useAnimation();
-  const { isUserAtMaxLevel, exp, level, isUserAtThisLevelOrGreater } =
-    useExperienceInfo();
+  const {
+    isUserAtMaxLevel,
+    exp,
+    level,
+    isUserAtThisLevelOrGreater,
+    isUserReadingAnArticle,
+  } = useExperienceInfo();
   const { showHeaderAnimation } = useAppSelector(selectPortfolioBehavior);
 
   const { isMobile } = useResponsive();
@@ -130,17 +135,6 @@ export function Header() {
         >
           LEVEL {level}
         </Text>
-        {/* <Progress
-          size="xs"
-          my={1}
-          borderRadius="20px"
-          colorScheme="yellow"
-          min={0}
-          max={100}
-          hasStripe
-          isAnimated
-          value={isUserAtMaxLevel ? 100 : exp}
-        /> */}
         <ProgressBar
           height={5}
           filledBackground="linear-gradient(to right,#FFE259, #FFA751)"
@@ -155,6 +149,15 @@ export function Header() {
         >
           {isUserAtMaxLevel && "LEVEL MÁXIMO"}
         </Text>
+        <Text
+          fontFamily="Bungee"
+          fontWeight="extrabold"
+          colorScheme="yellow"
+          bgGradient="linear(to-r, #FFE259, #FFA751)"
+          bgClip="text"
+        >
+          {isUserReadingAnArticle && !isUserAtMaxLevel && "XP PAUSADA"}
+        </Text>
       </Flex>
 
       {isUserAtThisLevelOrGreater(3) ? (
@@ -168,9 +171,6 @@ export function Header() {
           />
         </Flex>
       )}
-
-      {/* <Navigation /> */}
-      {/* {!isTablet && <Notifications />} */}
     </Flex>
   );
 }
