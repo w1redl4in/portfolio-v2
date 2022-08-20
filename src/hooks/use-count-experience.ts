@@ -4,6 +4,7 @@ import { selectGamificationModal } from "@redux/slices/gamification-modal";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { MAX_LEVEL } from "@constants/exp";
+import { useExperienceInfo } from "./use-experience-info";
 
 export function useCountExperience() {
   const dispatch = useDispatch();
@@ -12,7 +13,12 @@ export function useCountExperience() {
 
   const { level } = useAppSelector(selectExp);
 
+  const { isUserReadingAnArticle } = useExperienceInfo();
+
   useEffect(() => {
+    if (isUserReadingAnArticle) {
+      return;
+    }
     if (!isGamificationModalOpen && level < MAX_LEVEL) {
       const interval = setInterval(() => {
         dispatch(increaseExp());
@@ -20,5 +26,5 @@ export function useCountExperience() {
 
       return () => clearInterval(interval);
     }
-  }, [dispatch, isGamificationModalOpen, level]);
+  }, [dispatch, isGamificationModalOpen, isUserReadingAnArticle, level]);
 }
