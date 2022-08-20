@@ -107,7 +107,7 @@ export function Level_3Reward() {
               as={motion.div}
               mx="2rem"
             >
-              <Box left={["-20%", "0"]} top="0" position="absolute">
+              <Box left={["-20%", "-15%"]} top="-0.5rem" position="absolute">
                 <Badge px={["0.5rem", "0.5rem"]}>
                   <Text>{returnLabelBasedOnMenu()}</Text>
                 </Badge>
