@@ -167,6 +167,7 @@ export function SocialMedias() {
       height="10vh"
       overflow="hidden"
       w="auto"
+      zIndex={98}
     >
       <Box
         alignItems="center"
