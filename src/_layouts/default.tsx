@@ -4,6 +4,7 @@ import { Level_2Reward } from "@gamification/rewards/level-2";
 import { useExperienceInfo } from "@hooks/use-experience-info";
 import { SocialMedias } from "@components/SocialMedias";
 import { useCountExperience } from "hooks/use-count-experience";
+import { DynamicLevel_4Reward } from "@gamification/rewards/level-4";
 
 interface DefaultLayoutProps {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 
   return (
     <Flex
+      position="relative"
       background="background"
       justifyContent="space-between"
       flexDirection="column"
@@ -27,6 +29,9 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
         <Level_2Reward />
       )}
       {children}
+      {isUserAtThisLevelOrGreater(4) && !isUserReadingAnArticle && (
+        <DynamicLevel_4Reward />
+      )}
       <SocialMedias />
     </Flex>
   );
