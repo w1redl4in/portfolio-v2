@@ -1,6 +1,6 @@
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState, memo } from "react";
 import {
   Box,
   Slider,
@@ -10,6 +10,7 @@ import {
   Flex,
   Icon,
   Alert,
+  Text,
 } from "@chakra-ui/react";
 import {
   AiFillPauseCircle,
@@ -45,10 +46,36 @@ export function Level_4Reward() {
     if (previousSong !== -1) setCurrentSong(SONGS[previousSong]);
   }, [currentSong]);
 
+  const formattedSongName = useMemo(() => {
+    const cleanCurrentSongName = currentSong
+      .replace("/sounds/", "")
+      .replace(".mp3", "");
+
+    const [songNameWithHyphen, artistNameWithHyphen] =
+      cleanCurrentSongName.split("_");
+
+    const songName = songNameWithHyphen.replaceAll("-", " ");
+    const artistName = artistNameWithHyphen.replaceAll("-", " ");
+
+    return `${songName} by ${artistName}`;
+  }, [currentSong]);
+
+  useEffect(() => {
+    setPlaying(true);
+    return () => {
+      setPlaying(false);
+    };
+  }, []);
+
   return (
     <>
       <Box display="none" position="absolute">
-        <ReactPlayer playing={playing} volume={volume} url={currentSong} />
+        <ReactPlayer
+          stopOnUnmount
+          playing={playing}
+          volume={volume}
+          url={currentSong}
+        />
       </Box>
       <Box
         position="fixed"
@@ -66,6 +93,11 @@ export function Level_4Reward() {
           borderRadius="10px"
           variant="solid"
         >
+          <Flex textAlign="center" flexWrap="wrap">
+            <Text color="brand" fontWeight="semibold">
+              {formattedSongName}
+            </Text>
+          </Flex>
           <Flex alignItems="center">
             <Icon
               _hover={{
@@ -126,8 +158,8 @@ export function Level_4Reward() {
 
 export const DynamicLevel_4Reward = dynamic<{}>(
   () =>
-    import("@gamification/rewards/level-4/index").then(
-      (mod) => mod.Level_4Reward
+    import("@gamification/rewards/level-4/index").then((mod) =>
+      memo(mod.Level_4Reward)
     ),
   {
     ssr: false,
