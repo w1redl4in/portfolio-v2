@@ -14,14 +14,16 @@ import {
 import {
   AiFillPauseCircle,
   AiFillPlayCircle,
+  BsFillVolumeUpFill,
   IoIosSkipBackward,
   IoIosSkipForward,
-  MdGraphicEq,
 } from "@icons";
+import { SONGS } from "@constants/songs";
 
 export function Level_4Reward() {
   const [volume, setVolume] = useState(0.1);
   const [playing, setPlaying] = useState(true);
+  const [currentSong, setCurrentSong] = useState(SONGS[0]);
 
   const handleVolumeChange = useCallback((value: number) => {
     setVolume(value);
@@ -31,24 +33,34 @@ export function Level_4Reward() {
     setPlaying((play) => !play);
   }, []);
 
-  const handleDuration = useCallback((duration: number) => {
-    console.log("duration", duration);
-  }, []);
+  const handleNextSong = useCallback(() => {
+    const nextSong = SONGS.findIndex((song) => song === currentSong) + 1;
+
+    if (nextSong < SONGS.length) setCurrentSong(SONGS[nextSong]);
+  }, [currentSong]);
+
+  const handlePreviousSong = useCallback(() => {
+    const previousSong = SONGS.findIndex((song) => song === currentSong) - 1;
+
+    if (previousSong !== -1) setCurrentSong(SONGS[previousSong]);
+  }, [currentSong]);
 
   return (
     <>
       <Box display="none" position="absolute">
-        <ReactPlayer
-          playing={playing}
-          volume={volume}
-          onDuration={handleDuration}
-          url="/sounds/Cozy-Place_Keys-Of-Moon.mp3"
-        />
+        <ReactPlayer playing={playing} volume={volume} url={currentSong} />
       </Box>
-      <Box position="fixed" bottom="2rem" left="0" right="0" w="30%" m="0 auto">
+      <Box
+        position="fixed"
+        bottom="2rem"
+        left="0"
+        right="0"
+        w={["40%", "30%", "30%", "20%"]}
+        m="0 auto"
+      >
         <Alert
           bg="modalBackground"
-          zIndex={99}
+          zIndex={999}
           display="flex"
           flexDir="column"
           borderRadius="10px"
@@ -64,6 +76,7 @@ export function Level_4Reward() {
               w={5}
               h={5}
               color="white"
+              onClick={handlePreviousSong}
             />
             <Icon
               _hover={{
@@ -85,6 +98,7 @@ export function Level_4Reward() {
               w={5}
               h={5}
               color="white"
+              onClick={handleNextSong}
             />
           </Flex>
           <Slider
@@ -95,12 +109,13 @@ export function Level_4Reward() {
             aria-label="slider-ex-2"
             colorScheme="yellow"
             defaultValue={0.3}
+            maxW="7rem"
           >
             <SliderTrack>
               <SliderFilledTrack />
             </SliderTrack>
             <SliderThumb boxSize={6}>
-              <Box color="brand" as={MdGraphicEq} />
+              <Box color="modalBackground" as={BsFillVolumeUpFill} />
             </SliderThumb>
           </Slider>
         </Alert>
