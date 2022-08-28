@@ -29,9 +29,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
         <Level_2Reward />
       )}
       {children}
-      {isUserAtThisLevelOrGreater(4) && !isUserReadingAnArticle && (
-        <DynamicLevel_4Reward />
-      )}
+      {isUserAtThisLevelOrGreater(4) && <DynamicLevel_4Reward />}
       <SocialMedias />
     </Flex>
   );
