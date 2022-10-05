@@ -14,6 +14,7 @@ export const theme = extendTheme({
       },
       "::-webkit-scrollbar": {
         width: "4px",
+        height: "4px",
         background: "background",
       },
       "::-webkit-scrollbar-track": {
