@@ -2,7 +2,6 @@ import { Flex } from "@chakra-ui/react";
 import { Header } from "@components/Header";
 import { Level_2Reward } from "@gamification/rewards/level-2";
 import { useExperienceInfo } from "@hooks/use-experience-info";
-import { SocialMedias } from "@components/SocialMedias";
 import { useCountExperience } from "hooks/use-count-experience";
 import { DynamicLevel_4Reward } from "@gamification/rewards/level-4";
 
@@ -30,7 +29,6 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
       )}
       {children}
       {isUserAtThisLevelOrGreater(4) && <DynamicLevel_4Reward />}
-      <SocialMedias />
     </Flex>
   );
 }
