@@ -1,7 +1,6 @@
 import {
   Badge,
   Box,
-  Center,
   Flex,
   Heading,
   HStack,
