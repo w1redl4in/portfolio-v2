@@ -16,7 +16,7 @@ import { useResponsive } from "@hooks/use-responsive";
 import { Lottie } from "@components/Lottie";
 import { useAppSelector } from "@redux/hooks";
 import { selectPortfolioBehavior } from "@redux/slices/portfolio-behavior";
-import { MdOutlineWork, MdOutlineArticle } from "@icons";
+import { MdOutlineWork, MdOutlineArticle, AiFillContacts } from "@icons";
 import Link from "next/link";
 
 export function Level_3Reward() {
@@ -73,6 +73,11 @@ export function Level_3Reward() {
         name: "Artigos",
         icon: MdOutlineArticle,
         href: "/articles",
+      },
+      {
+        name: "Redes Sociais",
+        icon: AiFillContacts,
+        href: "/social-medias",
       },
     ];
   }, []);
