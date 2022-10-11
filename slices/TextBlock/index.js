@@ -1,8 +1,8 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import { Stack, Heading, Text } from "@chakra-ui/react";
-import Syntax from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { Prism as Syntax } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const TextBlock = ({ slice }) => (
   <Stack as="section">
@@ -17,7 +17,7 @@ const TextBlock = ({ slice }) => (
         customStyle={{
           padding: "2rem 1rem",
         }}
-        language="typescript"
+        language={slice.primary.codeLanguage[0]?.text}
         style={gruvboxDark}
       >
         {RichText.asText(slice.primary.Code)}
