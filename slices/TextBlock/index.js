@@ -4,9 +4,18 @@ import { Stack, Heading, Text } from "@chakra-ui/react";
 import { Prism as Syntax } from "react-syntax-highlighter";
 import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
+const headingTranslations = {
+  heading1: "xl",
+  heading2: "lg",
+  heading3: "md",
+};
+
 const TextBlock = ({ slice }) => (
   <Stack as="section">
-    <Heading size="lg" color="brand">
+    <Heading
+      size={headingTranslations[slice.primary.title[0]?.type]}
+      color="brand"
+    >
       <RichText render={slice.primary.title} />
     </Heading>
     <Text color="textSecondary">
