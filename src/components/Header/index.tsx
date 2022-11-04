@@ -1,5 +1,4 @@
-import { Flex, Text, Progress } from "@chakra-ui/react";
-// import { Navigation } from "@components/Navigation";
+import { Flex, Text, Box, Badge } from "@chakra-ui/react";
 import { useExperienceInfo } from "@hooks/use-experience-info";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
@@ -107,7 +106,22 @@ export function Header() {
       backdropFilter="blur(8px)"
     >
       <Link href="/">
-        <Flex mx="2rem" as={motion.div} variants={leftLottieVariant}>
+        <Flex
+          position="relative"
+          mx="2rem"
+          as={motion.div}
+          variants={leftLottieVariant}
+        >
+          <Box
+            zIndex={1}
+            left={["20%", "20%"]}
+            top="-0.5rem"
+            position="absolute"
+          >
+            <Badge px={["0.5rem", "0.5rem"]}>
+              <Text>Inicio</Text>
+            </Badge>
+          </Box>
           <Lottie
             animationData={Logo}
             width={lottieWidthAndHeight}
