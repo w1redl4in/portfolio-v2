@@ -20,11 +20,25 @@ import {
   IoIosSkipForward,
 } from "@icons";
 import { SONGS } from "@constants/songs";
+import { useDispatch } from "react-redux";
+import { saveInfo, savePlayedSeconds, selectMusic } from "@redux/slices/music";
+import { useAppSelector } from "@redux/hooks";
+
+interface OnProgress {
+  played: number;
+  playedSeconds: number;
+  loaded: number;
+  loadedSeconds: number;
+}
 
 export function Level_4Reward() {
   const [volume, setVolume] = useState(0.1);
   const [playing, setPlaying] = useState(true);
-  const [currentSong, setCurrentSong] = useState(SONGS[0]);
+  const [playerRef, setPlayerRef] = useState<ReactPlayer | null>();
+
+  const dispatch = useDispatch();
+
+  const { playedSeconds, musicName } = useAppSelector(selectMusic);
 
   const handleVolumeChange = useCallback((value: number) => {
     setVolume(value);
@@ -35,19 +49,32 @@ export function Level_4Reward() {
   }, []);
 
   const handleNextSong = useCallback(() => {
-    const nextSong = SONGS.findIndex((song) => song === currentSong) + 1;
+    const nextSong = SONGS.findIndex((song) => song === musicName) + 1;
 
-    if (nextSong < SONGS.length) setCurrentSong(SONGS[nextSong]);
-  }, [currentSong]);
+    if (nextSong < SONGS.length) {
+      dispatch(saveInfo(SONGS[nextSong]));
+      dispatch(savePlayedSeconds(0));
+    }
+  }, [musicName, dispatch]);
 
   const handlePreviousSong = useCallback(() => {
-    const previousSong = SONGS.findIndex((song) => song === currentSong) - 1;
+    const previousSong = SONGS.findIndex((song) => song === musicName) - 1;
 
-    if (previousSong !== -1) setCurrentSong(SONGS[previousSong]);
-  }, [currentSong]);
+    if (previousSong !== -1) {
+      dispatch(saveInfo(SONGS[previousSong]));
+      dispatch(savePlayedSeconds(0));
+    }
+  }, [musicName, dispatch]);
+
+  const onProgress = useCallback(
+    (progress: OnProgress) => {
+      dispatch(savePlayedSeconds(progress.playedSeconds));
+    },
+    [dispatch]
+  );
 
   const formattedSongName = useMemo(() => {
-    const cleanCurrentSongName = currentSong
+    const cleanCurrentSongName = musicName
       .replace("/sounds/", "")
       .replace(".mp3", "");
 
@@ -56,25 +83,36 @@ export function Level_4Reward() {
 
     const songName = songNameWithHyphen.replaceAll("-", " ");
     const artistName = artistNameWithHyphen.replaceAll("-", " ");
+    const songNameWithArtistName = `${songName} by ${artistName}`;
 
-    return `${songName} by ${artistName}`;
-  }, [currentSong]);
+    return songNameWithArtistName;
+  }, [musicName]);
 
   useEffect(() => {
+    dispatch(saveInfo(musicName ?? SONGS[0]));
+  }, [dispatch, musicName]);
+
+  useEffect(() => {
+    if (playerRef && playedSeconds) {
+      playerRef?.seekTo(playedSeconds);
+    }
     setPlaying(true);
     return () => {
       setPlaying(false);
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, formattedSongName, playerRef]);
 
   return (
     <>
       <Box display="none" position="absolute">
         <ReactPlayer
+          ref={(ref) => setPlayerRef(ref)}
           stopOnUnmount
           playing={playing}
+          onProgress={onProgress}
           volume={volume}
-          url={currentSong}
+          url={musicName}
         />
       </Box>
       <Box
