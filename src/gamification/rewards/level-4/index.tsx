@@ -79,18 +79,21 @@ export function Level_4Reward() {
       .replace(".mp3", "");
 
     const [songNameWithHyphen, artistNameWithHyphen] =
-      cleanCurrentSongName.split("_");
+      cleanCurrentSongName?.split("_");
 
-    const songName = songNameWithHyphen.replaceAll("-", " ");
-    const artistName = artistNameWithHyphen.replaceAll("-", " ");
+    const songName = songNameWithHyphen?.replaceAll("-", " ");
+    const artistName = artistNameWithHyphen?.replaceAll("-", " ");
     const songNameWithArtistName = `${songName} by ${artistName}`;
 
     return songNameWithArtistName;
   }, [musicName]);
 
   useEffect(() => {
-    dispatch(saveInfo(musicName ?? SONGS[0]));
-  }, [dispatch, musicName]);
+    const whichSongToPlay = musicName !== "" ? musicName : SONGS[0];
+    dispatch(saveInfo(whichSongToPlay));
+    setPlaying(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
 
   useEffect(() => {
     if (playerRef && playedSeconds) {
