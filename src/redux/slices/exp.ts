@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "@redux/store";
+import { MAX_LEVEL } from "@constants/exp";
 
 const ExpMultiplicatorByLevel = new Map();
 ExpMultiplicatorByLevel.set(1, 1);
@@ -31,6 +32,10 @@ export const expSlice = createSlice({
       state.levelIncreased = false;
       state.exp = state.exp + 10 * state.ExpMultiplicator;
     },
+    increaseExpToMaxLevel: (state) => {
+      state.exp = 100;
+      state.level = MAX_LEVEL;
+    },
   },
 });
 
@@ -38,4 +43,5 @@ export default expSlice.reducer;
 
 export const selectExp = (state: RootState) => state.exp;
 
-export const { increaseExp, increaseLevel } = expSlice.actions;
+export const { increaseExp, increaseLevel, increaseExpToMaxLevel } =
+  expSlice.actions;
