@@ -50,7 +50,7 @@ export function Introduction() {
               "Gamer.",
               "Self Taught.",
               "Novice Writer.",
-              "Beer Lover.",
+              "Gym Rat.",
             ]}
           />
         )}
