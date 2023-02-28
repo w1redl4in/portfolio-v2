@@ -94,6 +94,17 @@ export function Introduction() {
           />
         )}
       </Text>
+      <Text fontFamily="Heebo" fontWeight="medium" color="brand">
+        {showIntroduction && (
+          <ReactTypingEffect
+            cursor=" "
+            typingDelay={10000}
+            eraseDelay={10000 * 10000}
+            speed={50}
+            text={["ex nihilo nihil fit"]}
+          />
+        )}
+      </Text>
     </Flex>
   );
 }
