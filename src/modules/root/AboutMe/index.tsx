@@ -101,7 +101,7 @@ export function AboutMe() {
               </Text>
             </Flex>
             <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
-              Meu nome é Felipe Austríaco, <br /> tenho 26 anos e sou
+              Meu nome é Felipe Austríaco, <br /> tenho 27 anos e sou
               desenvolvedor há 3 anos. 😁
             </Text>
 
