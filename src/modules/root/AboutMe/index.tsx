@@ -3,6 +3,7 @@ import { useResponsive } from "@hooks/use-responsive";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useMemo } from "react";
 import { useInView } from "react-intersection-observer";
+import moment from 'moment'
 
 export function AboutMe() {
   const control = useAnimation();
@@ -49,6 +50,10 @@ export function AboutMe() {
       control.start("hidden");
     }
   }, [control, inView]);
+
+  const birthday = moment('1995-11-21')
+
+  const myAge = birthday.diff(moment(), 'years')
 
   return (
     <Flex
@@ -101,7 +106,7 @@ export function AboutMe() {
               </Text>
             </Flex>
             <Text fontFamily="Heebo" fontSize="larger" color="textSecondary">
-              Meu nome é Felipe Austríaco, <br /> tenho 27 anos e sou
+              Meu nome é Felipe Austríaco, <br /> tenho {myAge * -1} anos e sou
               desenvolvedor há 3 anos. 😁
             </Text>
 
