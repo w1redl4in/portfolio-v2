@@ -5,7 +5,7 @@ export const theme = extendTheme({
     background: "#0E0E10",
     modalBackground: "#151417",
     brand: "#FFD858",
-    textSecondary: "#8F9BA8",
+    textSecondary: "#d0d1d2",
   },
   styles: {
     global: {
