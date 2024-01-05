@@ -2,7 +2,7 @@ import React from "react";
 import { RichText } from "prismic-reactjs";
 import { Stack, Heading, Text } from "@chakra-ui/react";
 import { Prism as Syntax } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const headingTranslations = {
   heading1: "xl",
@@ -27,7 +27,7 @@ const TextBlock = ({ slice }) => (
           padding: "2rem 1rem",
         }}
         language={slice.primary.codeLanguage[0]?.text}
-        style={gruvboxDark}
+        style={nightOwl}
       >
         {RichText.asText(slice.primary.Code)}
       </Syntax>
