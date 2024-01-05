@@ -74,7 +74,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/feaustriaco/Projects/Pessoal/portfolio-v2/.slicemachine/assets/slices/Image/default/preview.png",
+            "path": "/Users/feaustriaco/Projects/portfolio-v2/.slicemachine/assets/slices/Image/default/preview.png",
             "width": 800,
             "height": 48
           }
@@ -136,7 +136,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/feaustriaco/Projects/Pessoal/portfolio-v2/.slicemachine/assets/slices/Quote/default/preview.png",
+            "path": "/Users/feaustriaco/Projects/portfolio-v2/.slicemachine/assets/slices/Quote/default/preview.png",
             "width": 800,
             "height": 48
           }
