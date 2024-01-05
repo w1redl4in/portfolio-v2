@@ -7,6 +7,8 @@ import {
   Link,
   Text,
   Icon,
+  Badge,
+  HStack
 } from "@chakra-ui/react";
 import { DynamicSliceMachine } from "@components/SliceMachine";
 import { DefaultLayout } from "@layouts/default";
@@ -16,6 +18,7 @@ import { SEO } from "@components/SEO";
 import NextLink from "next/link";
 import { AiOutlineRollback } from "@icons";
 import { getUnsplashImage } from "services/unsplash";
+import { badgeColors, randomBadgeColor } from "utils/badge-colors";
 
 type ArticleProps = {
   article: {
@@ -25,6 +28,7 @@ type ArticleProps = {
     date: string;
     slices: any[];
     description: string;
+    keywords: string;
   };
 };
 
@@ -66,9 +70,16 @@ const Article: React.FC<ArticleProps> = ({ article }) => {
             </NextLink>
           </Box>
 
-          <Heading color="brand" mb="5rem">
-            {article.title}
-          </Heading>
+          <Stack mb="5rem">
+            <Heading color="brand">
+              {article.title}
+            </Heading>
+            <HStack>
+              {article.keywords.split(' ').map(keyword => (
+                <Badge width="fit-content" key={keyword} colorScheme={badgeColors[Math.floor(Math.random() * badgeColors.length)]}>{keyword}</Badge>
+              ))}
+            </HStack>
+          </Stack>
           <Stack spacing="3rem">
             <DynamicSliceMachine slices={article.slices} />
           </Stack>
@@ -96,6 +107,7 @@ export async function getStaticProps(context: any) {
     date: prismicResponse.data.date,
     description: RichText.asText(prismicResponse.data.Description),
     slices: prismicResponse.data.slices,
+    keywords
   };
 
   return {

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { SEO } from "@components/SEO";
 import FancyText from "@carefully-coded/react-text-gradient";
 import { getUnsplashImage } from "services/unsplash";
+import { badgeColors } from "utils/badge-colors";
 
 interface ArticlesProps {
   articles: [
@@ -21,8 +22,6 @@ interface ArticlesProps {
     }
   ];
 }
-
-const badgeColors = ['red', 'blue', 'yellow', 'purple', 'pink', 'orange', 'teal', 'cyan', 'gray']
 
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   return (
