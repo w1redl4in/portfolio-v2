@@ -18,8 +18,6 @@ export async function getUnsplashImage(
 
   const image = response.response?.results[3];
 
-  console.log("image", image);
-
   return {
     thumbnail: image?.urls?.full,
     altThumbnail: image?.alt_description,
