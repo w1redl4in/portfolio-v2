@@ -15,6 +15,7 @@ import { getPrismicClient } from "services/prismic";
 import { SEO } from "@components/SEO";
 import NextLink from "next/link";
 import { AiOutlineRollback } from "@icons";
+import { getUnsplashImage } from "services/unsplash";
 
 type ArticleProps = {
   article: {
@@ -84,10 +85,14 @@ export async function getStaticProps(context: any) {
 
   const prismicResponse = await prismic.getByUID("articles", slug);
 
+  const keywords = prismicResponse?.data?.thumbnail?.alt
+
+  const { thumbnail, altThumbnail } = await getUnsplashImage(keywords)
+
   const article = {
     title: RichText.asText(prismicResponse.data.title),
-    thumbnail: prismicResponse.data.thumbnail.url,
-    altThumbnail: prismicResponse.data.thumbnail.alt,
+    thumbnail,
+    altThumbnail,
     date: prismicResponse.data.date,
     description: RichText.asText(prismicResponse.data.Description),
     slices: prismicResponse.data.slices,
