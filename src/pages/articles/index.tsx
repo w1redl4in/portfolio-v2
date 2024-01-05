@@ -1,10 +1,11 @@
-import { Box, Heading, Text, Stack, Image, HStack } from "@chakra-ui/react";
+import { Box, Heading, Text, Stack, Image, HStack, Badge } from "@chakra-ui/react";
 import { DefaultLayout } from "@layouts/default";
 import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
 import Link from "next/link";
 import { SEO } from "@components/SEO";
 import FancyText from "@carefully-coded/react-text-gradient";
+import { getUnsplashImage } from "services/unsplash";
 
 interface ArticlesProps {
   articles: [
@@ -16,9 +17,12 @@ interface ArticlesProps {
       altThumbnail: string;
       readTime: string;
       description: string;
+      keywords: string;
     }
   ];
 }
+
+const badgeColors = ['red', 'blue', 'yellow', 'purple', 'pink', 'orange', 'teal', 'cyan', 'gray']
 
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   return (
@@ -100,6 +104,11 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
                           •&nbsp;{article.readTime}
                         </Text>
                       </HStack>
+                      <HStack>
+                        {article.keywords.split(' ').map(keyword => (
+                          <Badge width="fit-content" key={keyword} colorScheme={badgeColors[Math.floor(Math.random() * badgeColors.length)]}>{keyword}</Badge>
+                        ))}
+                      </HStack>
                       <Text className="description" color="textSecondary">
                         {article.description}
                       </Text>
@@ -120,14 +129,22 @@ export async function getStaticProps() {
 
   const prismicResponse = await prismic.getAllByType("articles");
 
-  const articles = prismicResponse.map((article) => ({
-    slug: article.uid,
-    title: RichText.asText(article.data.title),
-    thumbnail: article.data.thumbnail.url,
-    altThumbnail: article.data.thumbnail.alt,
-    description: RichText.asText(article.data.Description),
-    readTime: RichText.asText(article.data.ReadTimeEstimate),
-    date: article.data.date,
+  const articles = await Promise.all(prismicResponse.map(async (article) => {
+
+    const keywords = article.data.thumbnail.alt
+
+    const { thumbnail, altThumbnail } = await getUnsplashImage(keywords)
+
+    return {
+      slug: article.uid,
+      title: RichText.asText(article.data.title),
+      thumbnail,
+      altThumbnail,
+      description: RichText.asText(article.data.Description),
+      readTime: RichText.asText(article.data.ReadTimeEstimate),
+      date: article.data.date,
+      keywords
+    }
   }));
 
   return {
