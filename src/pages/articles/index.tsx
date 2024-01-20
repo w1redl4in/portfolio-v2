@@ -80,6 +80,7 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
                       marginBottom={["1rem", "1rem", 0, 0]}
                       src={article.thumbnail}
                       alt={article.altThumbnail}
+                      loading="lazy"
                     />
                     <Stack>
                       <Heading
@@ -126,7 +127,12 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
 export async function getStaticProps() {
   const prismic = getPrismicClient();
 
-  const prismicResponse = await prismic.getAllByType("articles");
+  const prismicResponse = await prismic.getAllByType("articles", {
+    orderings: {
+      field: 'document.first_publication_date',
+      direction: 'desc'
+    }
+  });
 
   const articles = await Promise.all(prismicResponse.map(async (article) => {
 
