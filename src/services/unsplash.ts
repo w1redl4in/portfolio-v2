@@ -16,7 +16,7 @@ export async function getUnsplashImage(
     orientation,
   });
 
-  const image = response.response?.results[3];
+  const image = response.response?.results?.[0];
 
   return {
     thumbnail: image?.urls?.full,
