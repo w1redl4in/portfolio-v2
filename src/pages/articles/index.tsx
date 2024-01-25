@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Image, HStack, Badge } from "@chakra-ui/react";
+import { Box, Heading, Text, Stack, HStack, Badge, Img } from "@chakra-ui/react";
 import { DefaultLayout } from "@layouts/default";
 import { getPrismicClient } from "services/prismic";
 import { RichText } from "prismic-dom";
@@ -72,7 +72,7 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
                     spacing="2rem"
                     flexDir={["column", "column", "row", "row"]}
                   >
-                    <Image
+                    <Img
                       borderRadius="base"
                       transition="transform 200ms linear"
                       maxW={["100%", "100%", "25rem", "25rem"]}
